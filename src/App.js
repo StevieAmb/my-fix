@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Areas from './Areas';
 import NavBar from './NavBar';
+import { Route } from 'react-router-dom'
 import logo from './logo.svg';
 import './App.css';
 
@@ -16,7 +17,7 @@ class App extends Component {
     return (
       <div className="App">
         <NavBar />
-        <Areas areas={this.state.areas} />
+        <Route exact path="/" render={() => <Areas areas={this.state.areas} /> } />
       </div>
     )
   }
