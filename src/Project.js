@@ -1,8 +1,8 @@
 import React from "react";
 
-const Project = () => {
+const Project = ({name}) => {
   return (
-    <h1>This is a youtube video!</h1>
+    <h1>{name}</h1>
   )
 }
 
