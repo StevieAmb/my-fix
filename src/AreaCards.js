@@ -1,11 +1,14 @@
 import React from "react";
 import './AreaCards.css'
+import { NavLink } from "react-router-dom";
 
 const AreaCards = ({homeArea}) => {
   return (
-    <div className="area-card">
-    <h1>{homeArea}</h1>
-    </div>
+    <NavLink className="area-card" to="/" >
+      <div>
+      <h1>{homeArea}</h1>
+      </div>
+    </NavLink>
   )
 }
 
