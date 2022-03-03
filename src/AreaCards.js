@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const AreaCards = ({homeArea}) => {
   return (
-    <NavLink className="area-card" to="/" >
+    <NavLink className="area-card" to={`/${homeArea}`} >
       <div>
       <h1>{homeArea}</h1>
       </div>
