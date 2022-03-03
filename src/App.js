@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Areas from './Areas';
 import NavBar from './NavBar';
+import Projects from './Projects';
+import { Route } from 'react-router-dom'
 import logo from './logo.svg';
 import './App.css';
 
@@ -8,15 +10,57 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      areas: ['kitchen', 'bathroom', 'bedroom', 'miscellaneous']
+      areas: ['kitchen', 'bathroom', 'bedroom', 'miscellaneous'],
+      projects: [
+        {
+          id: 1,
+          areaOfHome: 'Kitchen',
+          Project: 'Leaky Faucet',
+          toolsNeeded: [],
+          video1: '',
+          video2: ''
+        },
+        {
+          id: 2,
+          areaOfHome: 'Kitchen',
+          Project: 'Broken Garbage Disposal',
+          toolsNeeded: [],
+          video1: '',
+          video2: ''
+        },
+        {
+          id: 3,
+          areaOfHome: 'Bathroom',
+          Project: 'Broken table chair',
+          toolsNeeded: [],
+          video1: '',
+          video2: ''
+        },
+          ]
 
     }
   }
+
+  returnProjects = (projects, category) => {
+     let filteredProjects = projects.filter(project => {
+       let lowerCaseArea = project.areaOfHome.toLowerCase()
+       let lowerCaseCategory = category.toLowerCase()
+        if(lowerCaseArea === lowerCaseCategory) {
+          return project;
+        }
+      })
+      {console.log("here", filteredProjects)}
+      return (
+      <Projects category={filteredProjects} />
+      )
+    }
+
   render() {
     return (
       <div className="App">
         <NavBar />
-        <Areas areas={this.state.areas} />
+        <Route exact path="/" render={() => <Areas areas={this.state.areas} /> } />
+        <Route exact path="/:area" render={( {match} ) =>  this.returnProjects(this.state.projects, match.params.area)} />
       </div>
     )
   }
@@ -24,9 +68,10 @@ class App extends Component {
 
 export default App;
 
-//The user comes onto the app
-//They see cards that have areas of the house on them (Kitchen, Bathroom, Etc), which will be clickable links.
-//You want to pass the categories down to cards, in order to... add them on AreaCards
-//They will link to different projects they might have (Leaky faucet, clogged toilet)
-//They will click on ONE project, which will also be a link, which will lead them to
-//A youtube video.
+
+//So, when the user clicks on an area of their home,
+//They will be taken to a page <Projects />, where they can see the cards of different projects
+//That they can do for that area of the house
+//If things are in the app state, then you can pass down the data as... props to projects,
+//And then, when the project buttons are clicked, that's when it takes you to the page with the video,
+//Which can be on the same page?

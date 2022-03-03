@@ -1,8 +1,9 @@
 import React from 'react';
 
-const Projects = () => {
+const Projects = ({category}) => {
+  
   return (
-    <h1>You've clicked an area of your house, now you see these projects that you can also click on</h1>
+    <h1>{category.project}</h1>
   )
 }
 
