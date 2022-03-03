@@ -1,0 +1,5 @@
+.area-cards-container {
+  display: flex;
+  gap: 3em;
+
+}
