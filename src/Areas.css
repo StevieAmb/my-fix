@@ -1,5 +1,7 @@
 .area-cards-container {
   display: flex;
   gap: 3em;
-
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }

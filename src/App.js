@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Areas from './Areas';
+import NavBar from './NavBar';
 import logo from './logo.svg';
 import './App.css';
 
@@ -14,7 +15,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Hello hello!</h1>
+        <NavBar />
         <Areas areas={this.state.areas} />
       </div>
     )

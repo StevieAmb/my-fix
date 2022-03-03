@@ -1,0 +1,15 @@
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #7D8491;
+  margin-bottom: 10%;
+}
+
+.page-name {
+  margin-left: 5%;
+  color: white;
+}
+.user-search {
+  margin: 2%;
+  height: 20%;
+}
