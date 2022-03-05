@@ -10,7 +10,7 @@ const NavBar = () => {
     <input
         type="text"
         placeholder="Tools I have..."
-        value="Tools I Have..."
+        value=""
         />
         <button>FIX IT!</button>
       </div>
