@@ -1,4 +1,4 @@
-[
+project =  [
   // {
   //   id: 1,
   //   areaOfHome: 'Kitchen',
@@ -160,11 +160,11 @@
   //   toolsNeeded: ['drill', 'tape', 'marker', 'chisel', 'sandpaper', 'wood glue', 'artist paintbrush', 'rubber mallet'],
   //   videos: ['<iframe width="560" height="315" src="https://www.youtube.com/embed/dKqIVWTpIiA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>']
   // },
-  {
-    id: 24,
-    areaOfHome: 'Miscellaneous',
-    Project: 'Remove Stain From Carpet',
-    toolsNeeded: ['denatured alcohol', 'old toothbrush'],
-    videos: ''
-  }
+  // {
+  //   id: 24,
+  //   areaOfHome: 'Miscellaneous',
+  //   Project: 'Remove Stain From Carpet',
+  //   toolsNeeded: ['denatured alcohol', 'old toothbrush', 'light-colored rags', 'wet/dry vaccuum', 'baking soda', 'spoon', 'dish soap', 'water', 'spray bottle', 'acetone', 'paper towels', 'hydrogen peroxide'],
+  //   videos: ['<iframe width="560" height="315" src="https://www.youtube.com/embed/ZDEscYyxZ0U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>']
+  // }
 ]
