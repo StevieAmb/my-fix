@@ -132,35 +132,39 @@
   //   toolsNeeded: ['drill', 'speed square', 'pencil', 'screws', 'drill bit', 'wood glue', 'rag'],
   //   video: ['<iframe width="560" height="315" src="https://www.youtube.com/embed/98gPMdsInZo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>']
   // },
-  {
-    id: 20,
-    areaOfHome: 'Bedroom',
-    toolsNeeded: [],
-    video: ''
-  },
-  {
-    id: 21,
-    areaOfHome: 'Bedroom',
-    toolsNeeded: [],
-    video: ''
-  },
+  // {
+  //   id: 20,
+  //   areaOfHome: 'Bedroom',
+  //   Project: 'Busted Bedroom Door Latch',
+  //   toolsNeeded: ['flathead screwdriver', 'hammer', 'phillips head screwdriver', 'metal cobalt file', 'pencil', 'toothpick', 'superglue', 'utility knife', 'hammer', 'trim nail', 'drill', 'titanium drill bit', '1in chisel', 'wood filler', 'caulk'],
+  //   videos: ['<iframe width="560" height="315" src="https://www.youtube.com/embed/UcWRcbK4Ra4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>']
+  // },
+  // {
+  //   id: 21,
+  //   areaOfHome: 'Bedroom',
+  //   Project: 'Sticking Bedroom Door',
+  //   toolsNeeded: ['bucket', 'diagonal cutters', 'hammer', '8in crescent wrench', 'scraps of plywood'],
+  //   videos: ['<iframe width="560" height="315" src="https://www.youtube.com/embed/AzRqVgkjZaY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>']
+  // },
   // {
   //   id: 22,
   //   areaOfHome: 'Miscellaneous',
   //   Project: 'Baseboard Repairs',
   //   toolsNeeded: ['sandpaper', 'wood glue', 'wood filler', 'x-acto knife', 'damp rag'],
-  //   video: ['<iframe width="560" height="315" src="https://www.youtube.com/embed/VKy9YU5dBYc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>']
+  //   videos: ['<iframe width="560" height="315" src="https://www.youtube.com/embed/VKy9YU5dBYc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>']
   // },
-  {
-    id: 23,
-    areaOfHome: 'Miscellaneous',
-    toolsNeeded: [],
-    video: ''
-  },
+  // {
+  //   id: 23,
+  //   areaOfHome: 'Miscellaneous',
+  //   Project: 'Wobbly Chair Legs',
+  //   toolsNeeded: ['drill', 'tape', 'marker', 'chisel', 'sandpaper', 'wood glue', 'artist paintbrush', 'rubber mallet'],
+  //   videos: ['<iframe width="560" height="315" src="https://www.youtube.com/embed/dKqIVWTpIiA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>']
+  // },
   {
     id: 24,
     areaOfHome: 'Miscellaneous',
-    toolsNeeded: [],
-    video: ''
+    Project: 'Remove Stain From Carpet',
+    toolsNeeded: ['denatured alcohol', 'old toothbrush'],
+    videos: ''
   }
 ]
