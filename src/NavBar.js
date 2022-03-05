@@ -1,10 +1,15 @@
 import React from "react";
 import './NavBar.css'
+import { NavLink } from 'react-router-dom';
+
 const NavBar = () => {
   return (
     <div className="nav-bar">
       <div className="page-name">
-        <h1>MY FIX</h1>
+        <NavLink className="page-title" to="/">
+          <h1>MY FIX</h1>
+          <p>For those who need to justify the amount of tools they own...</p>
+        </NavLink>
      </div>
       <div className="user-search">
     <input
