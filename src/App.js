@@ -69,9 +69,6 @@ class App extends Component {
 export default App;
 
 
-//So, when the user clicks on an area of their home,
-//They will be taken to a page <Projects />, where they can see the cards of different projects
-//That they can do for that area of the house
-//If things are in the app state, then you can pass down the data as... props to projects,
+
 //And then, when the project buttons are clicked, that's when it takes you to the page with the video,
 //Which can be on the same page?

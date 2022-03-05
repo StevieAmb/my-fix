@@ -1,8 +1,11 @@
 import React from "react";
+import './Project.css'
 
-const Project = () => {
+const Project = ({name}) => {
   return (
-    <h1>This is a youtube video!</h1>
+    <div className="project-card">
+      <h1>{name}</h1>
+   </div>
   )
 }
 

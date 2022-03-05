@@ -3,10 +3,20 @@
   justify-content: space-between;
   background-color: #7D8491;
   margin-bottom: 10%;
+  box-shadow: 5px 5px 4px #453643;
+}
+.page-title {
+  text-decoration: none;
+  color: #453643;
+}
+
+.page-title:hover {
+  color: white;
 }
 
 .page-name {
   margin-left: 5%;
+  font-weight: 900;
   color: white;
 }
 .user-search {
