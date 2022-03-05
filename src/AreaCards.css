@@ -2,12 +2,12 @@
   background-color: #28112B;
   width: 20%;
   text-align: center;
-  box-shadow: 5px 5px 5px #453643;
   color: white;
 }
 
 .area-card:hover {
   background-color: #788475;
+  box-shadow: 5px 5px 5px #453643;
 }
 
 .area-photo {
