@@ -1,5 +1,6 @@
 import React from 'react';
 import Project from './Project';
+import './Projects.css'
 
 const Projects = ({category}) => {
   {console.log(category)}
@@ -13,7 +14,7 @@ const Projects = ({category}) => {
     )
   })
   return (
-    <div>
+    <div className='projects-container'>
       {allProjects}
     </div>
   )
