@@ -8,10 +8,7 @@ class NavBar extends Component {
     this.state = {
       userInput: ""
     }
-
-    
-    
-  }
+ }
   
   handleChange = (event) => {
     this.setState({[event.target.name] : [event.target.value]})
@@ -27,7 +24,9 @@ class NavBar extends Component {
           </NavLink>
        </div>
         <div className="user-search">
+          <form>
       <input
+          id="toolSearch"
           type="text"
           name="userInput"
           placeholder="Tools I have..."
@@ -35,6 +34,8 @@ class NavBar extends Component {
           onChange={(event) => this.handleChange(event)}
           />
           <button>FIX IT!</button>
+
+          </form>
         </div>
       </div>
       

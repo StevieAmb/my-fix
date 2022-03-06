@@ -12,13 +12,15 @@ class App extends Component {
     super()
     this.state = {
       areas: ['kitchen', 'bathroom', 'bedroom', 'miscellaneous'],
-      homeRepairs: []
+      homeRepairs: [],
+      error: ''
     }
   }
 
   componentDidMount() {
     getHomeRepairs()
     .then(data => this.setState({homeRepairs: data}))
+    .catch(error => this.setState({error: error.message}))
   }
 
   returnProjects = (projects, category) => {
