@@ -8,6 +8,7 @@ const Videos = ({repairVideo, toTry}) => {
           key={repairVideo.id}
           video={repairVideo.videos}
           projToTry={toTry}
+          name={repairVideo.project}
           />
     )
   }
