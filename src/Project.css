@@ -1,6 +1,12 @@
 .project-card {
-  border: 3px solid purple;
-  background-color: yellow;
+  background-color: #28112B;
+  text-decoration: none;
   width: 20%;
   text-align: center;
+  color: white;
+}
+
+.project-card:hover {
+  background-color: #788475;
+  box-shadow: 5px 5px 5px #453643;
 }
