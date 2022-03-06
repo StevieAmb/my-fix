@@ -29,11 +29,18 @@ describe('Video Page', () => {
   })
 
 
-  it('User should be able to see a video', () => {
+  it('User should be able to see a video, with the title', () => {
     cy.get('.video-container')
     .children('iframe')
     .should('have.length', 1)
     .should('be.visible')
+    .get('h3').contains('Leaky Faucet')
+  })
+
+  it('User should be able to see list of tools required for project', () => {
+    cy.get('.tools-list')
+    .children('li')
+    .should('have.length', 5)
   })
 
   it('User should be able to see an "Add To My Projects" button and click it', () => {
