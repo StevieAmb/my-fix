@@ -13,10 +13,13 @@ describe('Main Page', () => {
     cy.get('button').contains('FIX IT!').click()
   })
 
-  it('User should be able to see all the home area cards with images')
+  it('User should be able to see all the home area cards with images', () => {
+    cy.get('.area-cards-container')
+    .children('a')
+    .should('have.length', 4)
+    cy.get('img').should('exist')
+  })
 
-  //user should see area cards
-  //user should see the images
   //user should be able to click on an area card
 
 })
