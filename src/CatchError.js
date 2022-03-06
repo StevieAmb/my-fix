@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types'
 
 const CatchError = ({error}) => {
   return (
@@ -11,3 +12,7 @@ const CatchError = ({error}) => {
 
 
 export default CatchError; 
+
+CatchError.propTypes = {
+  error: PropTypes.string.isRequired
+}
