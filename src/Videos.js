@@ -9,6 +9,7 @@ const Videos = ({repairVideo, toTry}) => {
           video={repairVideo.videos}
           projToTry={toTry}
           name={repairVideo.project}
+          tools={repairVideo.toolsNeeded}
           />
     )
   }
@@ -17,5 +18,5 @@ export default Videos
 
 Videos.propType = {
   repairVideo: PropTypes.object.isRequired,
-  toTy: PropTypes.func.isRequired
+  toTry: PropTypes.func.isRequired
 }
