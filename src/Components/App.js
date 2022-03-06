@@ -4,6 +4,7 @@ import  getHomeRepairs  from '../apiCalls';
 import NavBar from './NavBar';
 import Videos from '../Videos';
 import Projects from './Projects';
+import Tries from '../Tries';
 import { Route, Switch } from 'react-router-dom'
 import '../App.css';
 import CatchError from '../CatchError';
@@ -14,7 +15,38 @@ class App extends Component {
     this.state = {
       areas: ['kitchen', 'bathroom', 'bedroom', 'miscellaneous'],
       homeRepairs: [],
-      error: ''
+      error: '',
+      toTry: []
+    }
+  }
+
+  addToTry = (projectVid) => {
+    if(!this.state.toTry.includes(projectVid)) {
+      this.setState({toTry: [...this.state.toTry, projectVid] })
+    }
+  }
+
+  listProjectsToTry = (projects, tryVideo) => {
+    let triedProj = []
+    console.log('triedProj', triedProj)
+    if(projects.length > 0) {
+      tryVideo.forEach(video => {
+        projects.forEach(project => {
+          if(project.videos === video) {
+            triedProj.push(project)
+          }
+        })
+      })
+      {console.log('tried', triedProj)}
+      if(triedProj.length > 0) {
+        return (
+          <Tries category={triedProj} />
+        )
+       } else {
+         return (
+           <h4>It seems you haven't tried a project yet. Get your tools and get going!</h4>
+         )
+       }
     }
   }
 
@@ -48,7 +80,7 @@ class App extends Component {
           }
         })
         return (
-          <Videos repairVideo={foundVideo} />
+          <Videos toTry={this.addToTry} repairVideo={foundVideo} />
         )
       }
     }
@@ -67,9 +99,11 @@ class App extends Component {
         <Route exact path="/" render={() => <Areas areas={this.state.areas} /> } />
         <Route exact path="/:area/home-improvement-repairs" render={( { match } ) =>  this.returnProjects(this.state.homeRepairs, match.params.area)} />
         <Route exact path="/video/:project" render={( { match }) => this.findVideo(this.state.homeRepairs, match.params.project)} />
+        <Route exact path="/tryThis" render={() => this.listProjectsToTry(this.state.homeRepairs, this.state.toTry)} />
         <Route render={() => <CatchError error={this.state.error} /> } />
         </Switch>
         <Route render={() => this.renderCatchError(this.state.error)} />
+        {console.log("add", this.state.toTry)}
       </div>
     )
   }
