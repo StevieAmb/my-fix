@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 import PropTypes from 'prop-types';
-import AreaCards from "../Components/AreaCards";
-import '../Areas.css'
+import AreaCards from '../Components/AreaCards';
+import '../Areas.css';
 
 const Areas = ({areas}) => {
   let allAreas = areas.map(area => {
