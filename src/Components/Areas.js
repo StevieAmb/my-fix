@@ -1,6 +1,6 @@
 import React from "react";
-import AreaCards from "./AreaCards";
-import './Areas.css'
+import AreaCards from "../Components/AreaCards";
+import '../Areas.css'
 
 const Areas = ({areas}) => {
   let allAreas = areas.map(area => {
