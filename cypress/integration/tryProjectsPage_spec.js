@@ -1,4 +1,4 @@
-describe('Video Page', () => {
+describe('Add To My Projects', () => {
   beforeEach(() => {
     cy.intercept('GET', "https://young-everglades-39392.herokuapp.com/", {fixture: 'example.json'})
     cy.visit('http://localhost:3000/')
@@ -10,7 +10,7 @@ describe('Video Page', () => {
     .url('http://localhost:3000/video/Leaky%20Faucet')
   })
 
-  it('User should see the nav bar, with title and blurb', () => {
+  it('User should see the nav bar, with title, blurb', () => {
     cy.get('.nav-bar').contains('MY FIXINGS')
     .contains('For those who need to justify the amount of tools they own...')
   })
@@ -28,17 +28,25 @@ describe('Video Page', () => {
     .contains('It seems you have not added a project yet. Get your tools and get going!')
   })
 
-
-  it('User should be able to see a video', () => {
-    cy.get('.video-container')
-    .children('iframe')
-    .should('have.length', 1)
-    .should('be.visible')
-  })
-
-  it('User should be able to see an "Add To My Projects" button and click it', () => {
-    cy.get('.video-container')
+  it('User should be able to see and click the button for adding a project to their My Projects', () => {
     cy.get('button').contains('Add To My Projects').click()
   })
 
+  it('User should be able to click "My Projects" button on navbar and see a list of project they added', () => {
+    cy.get('button').contains('Add To My Projects').click()
+    cy.get('.nav-bar')
+    .get('button').contains('My Projects').click()
+    .url(' http://localhost:3000/tryThis')
+  })
+
+  it('User should be able to click items on the list they made to see the video again', () => {
+    cy.get('button').contains('Add To My Projects').click()
+    cy.get('.nav-bar')
+    .get('button').contains('My Projects').click()
+    .url(' http://localhost:3000/tryThis')
+    cy.get('.try-container')
+    .children('a')
+    .contains('Leaky Faucet').click()
+    .url('')
+  })
 })

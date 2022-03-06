@@ -1,5 +1,6 @@
 import React from "react";
 import '../AreaCards.css'
+import PropTypes from 'prop-types'
 import { NavLink } from "react-router-dom";
 import bedroom from '../bedroom.jpeg';
 import bathroom from '../bathroom.jpeg';
@@ -16,7 +17,7 @@ const AreaCards = ({homeArea}) => {
     }
   })
   return (
-    <NavLink className="area-card" to={`/${homeArea}`} >
+    <NavLink className="area-card" to={`/${homeArea}/home-improvement-repairs`} >
       <div>
         {areaPics}
       <h1>{homeArea}</h1>
@@ -27,3 +28,7 @@ const AreaCards = ({homeArea}) => {
 
 
 export default AreaCards;
+
+AreaCards.propTypes = {
+  homeArea: PropTypes.string.isRequired
+}
