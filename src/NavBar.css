@@ -19,7 +19,57 @@
   font-weight: 900;
   color: white;
 }
-.user-search {
-  margin: 2%;
-  height: 20%;
+
+.user-projects {
+  width: 10%;
+  margin-left: 20%;
+}
+
+.my-projects {
+    margin-bottom: 3%;;
+    margin-left: 0%;
+    margin-top: 33%;
+    height: 34%;
+    color: white;
+    font-size: 2vh;
+    font-size: 1.1vw;
+    flex-wrap: wrap;
+    width: 80%;
+    background-color:  #453643;
+}
+
+@media only screen and (max-width: 650px) {
+  .nav-bar {
+    margin: 0;
+    display: block;
+    align-items: center;
+    background-color: #7D8491;
+    margin-bottom: 10%;
+    box-shadow: 5px 5px 4px #453643;
+  }
+
+  .user-projects {
+    height: 50%;
+    width: 30%;
+    margin-left: 20%;
+    margin-bottom: 2%;
+  }
+
+  .my-projects {
+    margin-bottom: 5%;
+    margin-left: 0%;
+    margin-top: 33%;
+    height: 100%;
+    color: white;
+    width: 80%;
+    background-color:  #453643;
+}
+
+.page-name {
+  margin-left: 5%;
+  font-size: 12px;
+  font-weight: 900;
+  color: white;
+}
+
 }

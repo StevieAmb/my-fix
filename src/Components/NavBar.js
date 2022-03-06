@@ -12,9 +12,9 @@ const NavBar = () => {
             <p>For those who need to justify the amount of tools they own...</p>
           </NavLink>
        </div>
-        <div className="user-search">
-          <NavLink to="/tryThis">
-          <button>My Projects</button>
+        <div className="user-projects">
+          <NavLink className="my-projects" to="/tryThis">
+          <button className="my-projects">My Projects</button>
           </NavLink>
         </div>
       </div>
