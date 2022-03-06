@@ -20,6 +20,11 @@ describe('Main Page', () => {
     cy.get('img').should('exist')
   })
 
-  //user should be able to click on an area card
+  it('User should be able to click on a card to be directed to the projects url', () => {
+    cy.get('.area-cards-container')
+    .children('a')
+    .eq(2).click()
+    .url('http://localhost:3000/bedroom')
+  })
 
 })
