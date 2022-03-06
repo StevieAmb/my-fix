@@ -1,5 +1,25 @@
-{
-  "name": "Using fixtures to represent data",
-  "email": "hello@cypress.io",
-  "body": "Fixtures are a great way to mock data for responses to routes"
+[
+  {"id": 1,
+"areaOfHome": "Kitchen",
+"project": "Leaky Faucet",
+"toolsNeeded": ["pliers",
+"hex key",
+"phillips screwdriver",
+"allen wrench",
+"faucet cartridge"
+],
+"videos": "https://www.youtube.com/embed/F4LeAVpTdds"
+},
+{"id": 2,
+"areaOfHome": "Kitchen",
+"project": "Fix Garbage Disposal",
+"toolsNeeded": ["allen wrench",
+"bowl",
+"lock nut",
+"screwdriver",
+"gloves",
+"needlenose pliers"
+],
+"videos": "https://www.youtube.com/embed/cdG520BhkNQ"
 }
+]
