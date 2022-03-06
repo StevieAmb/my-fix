@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types'
 import './Video.css'
 
 const Video = ({video}) => {
@@ -13,3 +14,7 @@ const Video = ({video}) => {
 }
 
 export default Video;
+
+Video.propType = {
+  video: PropTypes.string.isRequired
+}
