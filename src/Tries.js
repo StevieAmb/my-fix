@@ -12,9 +12,9 @@ const Tries = ({category}) => {
     )
   })
   return (
-    <div className='try-container'>
+    <section className="try-container">
       {toTries}
-    </div>
+    </section>
   )
 }
 
