@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import AreaCards from "../Components/AreaCards";
 import '../Areas.css'
 
@@ -18,3 +19,7 @@ const Areas = ({areas}) => {
 }
 
 export default Areas; 
+
+Areas.propTypes = {
+  areas: PropTypes.array.isRequired
+}
