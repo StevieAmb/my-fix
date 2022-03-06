@@ -1,7 +1,7 @@
-import React from "react";
-import '../AreaCards.css'
-import PropTypes from 'prop-types'
-import { NavLink } from "react-router-dom";
+import React from 'react';
+import '../AreaCards.css';
+import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
 import bedroom from '../bedroom.jpeg';
 import bathroom from '../bathroom.jpeg';
 import kitchen from '../Kitchen.jpeg';
@@ -20,7 +20,7 @@ const AreaCards = ({homeArea}) => {
     <NavLink className="area-card" to={`/${homeArea}/home-improvement-repairs`} >
       <div>
         {areaPics}
-      <h1>{homeArea}</h1>
+        <h1>{homeArea}</h1>
       </div>
     </NavLink>
   )
