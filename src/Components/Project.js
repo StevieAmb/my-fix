@@ -4,10 +4,9 @@ import '../Project.css'
 
 const Project = ({name, video}) => {
   return (
-
-    <div className="project-card">
+    <NavLink className="project-card" to={`/video/${name}`}>
       <h1>{name}</h1>
-   </div>
+      </NavLink>
   )
 }
 
