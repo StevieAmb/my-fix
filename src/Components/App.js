@@ -28,7 +28,6 @@ class App extends Component {
 
   listProjectsToTry = (projects, tryVideo) => {
     let triedProj = []
-    console.log('triedProj', triedProj)
     if(projects.length > 0) {
       tryVideo.forEach(video => {
         projects.forEach(project => {
@@ -37,14 +36,13 @@ class App extends Component {
           }
         })
       })
-      {console.log('tried', triedProj)}
       if(triedProj.length > 0) {
         return (
           <Tries category={triedProj} />
         )
        } else {
          return (
-           <h4>It seems you haven't tried a project yet. Get your tools and get going!</h4>
+           <h4>It seems you have not added a project yet. Get your tools and get going!</h4>
          )
        }
     }
@@ -103,7 +101,6 @@ class App extends Component {
         <Route render={() => <CatchError error={this.state.error} /> } />
         </Switch>
         <Route render={() => this.renderCatchError(this.state.error)} />
-        {console.log("add", this.state.toTry)}
       </div>
     )
   }
