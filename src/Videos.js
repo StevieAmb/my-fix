@@ -2,11 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Video from './Video';
 
-const Videos = ({repairVideo}) => {
+const Videos = ({repairVideo, toTry}) => {
     return (
         <Video 
           key={repairVideo.id}
           video={repairVideo.videos}
+          projToTry={toTry}
           />
     )
   }
@@ -14,5 +15,6 @@ const Videos = ({repairVideo}) => {
 export default Videos
 
 Videos.propType = {
-  repairVideo: PropTypes.object.isRequired
+  repairVideo: PropTypes.object.isRequired,
+  toTy: PropTypes.func.isRequired
 }
