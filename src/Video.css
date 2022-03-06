@@ -1,9 +1,26 @@
+.video-page-container {
+  display: flex;
+  flex-direction: column;
+  height: 75vh;
+  /* align-content: center; */
+}
+
 .video-container {
   display: flex;
-  justify-content: center;
+  color: white;
+  flex-direction: column;
+  align-items: center;
   background-color: #28112B;
   border: 10px solid #453643;
   box-shadow: 7px 7px 7px #788475;
   width: 50%;
   margin-left: 25%;
+}
+
+button {
+  height: 7%;
+  width: 30%;
+  margin-left: 35.5%;
+  margin-top: 1%;
+  background-color: #7D8491;
 }
