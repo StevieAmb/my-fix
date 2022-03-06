@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import Areas from '../Components/Areas';
 import  getHomeRepairs  from '../apiCalls';
 import NavBar from './NavBar';
+import Videos from '../Videos';
 import Projects from './Projects';
-import { Route } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import '../App.css';
 
 class App extends Component {
@@ -22,10 +23,7 @@ class App extends Component {
 
   returnProjects = (projects, category) => {
      if(projects.length > 0) {
-       console.log("repairs", projects)
       let filteredProjects = projects.filter(project => {
-          console.log("cat", category)
-          console.log('proj', project.areaOfHome)
           let lowerCaseArea = project.areaOfHome.toLowerCase()
           let lowerCaseCategory = category.toLowerCase()
             if(lowerCaseCategory === lowerCaseArea) {
@@ -33,17 +31,34 @@ class App extends Component {
             }
           })
        return (
-       <Projects category={filteredProjects} />
+       <Projects 
+       category={filteredProjects} />
        )
     }
+    }
+
+    findVideo = (repairs, project) => {
+      if(repairs.length > 0) {
+        let foundVideo = repairs.find(repair => {
+          if(project === repair.project) {
+            return repair
+          }
+        })
+        return (
+          <Videos repairVideo={foundVideo} />
+        )
+      }
     }
 
   render() {
     return (
       <div className="App">
         <NavBar />
+        <Switch>
         <Route exact path="/" render={() => <Areas areas={this.state.areas} /> } />
-        <Route exact path="/:area" render={( {match} ) =>  this.returnProjects(this.state.homeRepairs, match.params.area)} />
+        <Route exact path="/:area" render={( { match } ) =>  this.returnProjects(this.state.homeRepairs, match.params.area)} />
+        <Route exact path="/video/:project" render={( { match }) => this.findVideo(this.state.homeRepairs, match.params.project)} />
+        </Switch>
       </div>
     )
   }
