@@ -3,7 +3,6 @@ import Project from './Project';
 import '../Projects.css'
 
 const Projects = ({category}) => {
-  {console.log("yo", category)}
   let allProjects = category.map(category => {
     return (
       <Project 
