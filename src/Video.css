@@ -24,3 +24,22 @@ button {
   margin-top: 1%;
   background-color: #7D8491;
 }
+
+@media only screen and (max-width: 800px) {
+  .video-container {
+    display: flex;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    background-color: #788475;
+    border: 10px solid #4c4f4b;
+    box-shadow: 7px 7px 7px #28112B;
+    width: 70%;
+    margin-left: 15%;
+  }
+
+  iframe {
+    width: 60%;
+    height: 60%;
+  }
+}
