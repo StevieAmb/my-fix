@@ -30,6 +30,8 @@ const Video = ({video, projToTry, name, tools}) => {
 export default Video;
 
 Video.propType = {
+  tools: PropTypes.arrayOf(PropTypes.string.isRequired),
+  name: PropTypes.string.isRequired,
   video: PropTypes.string.isRequired,
   projToTry: PropTypes.func.isRequired
 }
