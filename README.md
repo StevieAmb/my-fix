@@ -75,25 +75,23 @@ to complete the projects.
 
 ## See the Site in Action! 
 
-Homepage View: 
+Don't feel bad about your tools.
+Those who misunderstand are fools.
 
-![homepage](https://user-images.githubusercontent.com/62816754/156053375-9b6ffb53-70ef-44f1-a72f-20e8e2ae3bc6.gif)
+You'll hammer, nail, and pound, and bruise,
+you'll collect all that you can use.
 
-Individual Art View:
+While they cower like a mouse.
+You're have a nice and study house.
 
-![art-view](https://user-images.githubusercontent.com/62816754/156053528-675186f5-e797-4cf5-be85-fb6978667a9f.gif)
+They may scowl, snipe, and sneer,
+They may nag you throughout the year!
 
-Art Details View:
+But if for your tools, you get in a spat!
+Just show their use, there's an app for that!
 
-![art-details](https://user-images.githubusercontent.com/62816754/156053581-b3652f06-e4c1-4c0c-b17b-84b30800bf04.gif)
+![Walk Through Site](https://media.giphy.com/media/g2TawNp8uEQ7LIijbo/giphy.gif)
 
-Art From the Heart is set up to be tablet and mobile responsive and resizes nicely for different size screens:
-
-![mobile-view](https://user-images.githubusercontent.com/62816754/156053644-6346970b-fad3-4165-91f0-9ba9f11bb705.gif)
-
-Art From the Heart also features a Dark Mode and can easily be toggled by the icon in the navigation bar:
-
-![dark-mode](https://user-images.githubusercontent.com/62816754/156053685-1e61981e-c9f7-4e66-9b25-f1e4a1d3fa29.gif)
 
 ## Future Goals
 
