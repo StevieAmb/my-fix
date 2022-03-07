@@ -74,6 +74,7 @@ to complete the projects.
 
 
 ## See the Site in Action! 
+![Walk Through Site](https://media.giphy.com/media/g2TawNp8uEQ7LIijbo/giphy.gif)
 
 Don't feel bad about your tools.
 Those who misunderstand are fools.
@@ -90,7 +91,6 @@ They may nag you throughout the year!
 But if for your tools, you get in a spat!
 Just show their use, there's an app for that!
 
-![Walk Through Site](https://media.giphy.com/media/g2TawNp8uEQ7LIijbo/giphy.gif)
 
 
 ## Future Goals
