@@ -47,7 +47,7 @@ I, and this app, believe in you!
 - Express
 - Nodemon
 - PropTypes
-- Project Structure Organized with [GitHub Project Board](https://polar-spire-35161.herokuapp.com/)
+- Project Structure Organized with [GitHub Project Board](https://github.com/StevieAmb/my-fix/projects/1)
 
 ## Installation and Set-Up
 
@@ -58,15 +58,17 @@ To install this project, please see below:
 2. Next, `cd` into the cloned repository and `npm install` to install library dependencies
 3. Finally, run `npm start` and open up localhost at the port indicated to view the webpage (http://localhost:3000/)
 ```
-Alternatively, you can access the deployed site [HERE](https://art-from-the-heart-mr-ryan12.vercel.app/)
+Alternatively, you can access the deployed site [HERE](https://polar-spire-35161.herokuapp.com/)
     
 ## Features
 
-- Variety of art categories on the homepage
-- Ability to rate art without external information impacting a user's rating
-  - Details are only shown after a user has rated the art to allow them to rate in a judgement free manner. Details include Art Title, Starting Date, Ending Date, Artist, and an Artwork Description.
-- Dark Mode
-- 100% Lighthouse and WAVE accessibility rating
+- User can view different areas of the home, with their images, on the landing page.
+- After the user clicks on an area of the home, it will pull up cards of different repair projects they can partake in. 
+- After the user picks a project they want to partake in, they can watch a video to see how it'd be done, as well as see a list of tools they need
+to complete the projects.
+- If you don't have time to watch the video at any given moment, you can click "Add To My Projects", and save it under your projects list to come back to later. 
+- Then you can go back home, pick another area of your house, and start over again.
+- 94% Lighthouse and WAVE accessibility rating
 - Mobile, Tablet, and Desktop friendly responsive design
 - Deployed website
 
@@ -96,22 +98,17 @@ Art From the Heart also features a Dark Mode and can easily be toggled by the ic
 ## Future Goals
 
 Create a backend to allow:
-- Tracking of user votes over time
-- The ability to leave and see comments for each work of art
-- Allow users to upload their own works of art so other users will never know if they are rating museum art or personal art
+- Create a search functionality that lets a user choose projects they can do based on tools that they have
+- The ability to leave comments on a video, in order to leave word on it's usefulness.
+- Allow users to leave ratings on a video, and maybe upload a video they think is better for a project.
 
 ## Created By:
-
-- [Ryan McBride](https://github.com/mr-ryan12)
 - [Stevie Ambroise](https://github.com/StevieAmb)
-- [Jacob Quintana](https://github.com/Jayquintana)
-- [Tony Carpenter](https://github.com/tonycarpenter21)
+
 
 ## Credit
-
-- Loading animation inspired by: https://loading.io/css/
-- Heart icon created by Freepik - Flaticon
-
+- Turing School of Software and Design
+- Turing Cohort 2110 
 
 
 
