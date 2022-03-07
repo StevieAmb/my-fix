@@ -82,7 +82,7 @@ You'll hammer, nail, and pound, and bruise,
 you'll collect all that you can use.
 
 While they cower like a mouse.
-You're have a nice and study house.
+You'll have a nice and sturdy house.
 
 They may scowl, snipe, and sneer,
 They may nag you throughout the year!
