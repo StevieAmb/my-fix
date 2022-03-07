@@ -5,7 +5,7 @@ import NavBar from './NavBar';
 import Videos from '../Videos';
 import Projects from './Projects';
 import Tries from '../Tries';
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom';
 import '../App.css';
 import CatchError from '../CatchError';
 
@@ -21,7 +21,7 @@ class App extends Component {
   }
 
   addToTry = (projectVid) => {
-    if(!this.state.toTry.includes(projectVid)) {
+    if (!this.state.toTry.includes(projectVid)) {
       this.setState({toTry: [...this.state.toTry, projectVid] })
     }
   }
@@ -36,60 +36,60 @@ class App extends Component {
           }
         })
       })
-      if(triedProj.length > 0) {
+      if (triedProj.length > 0) {
         return (
           <Tries category={triedProj} />
         )
-       } else {
-         return (
-           <h4>It seems you have not added a project yet. Get your tools and get going!</h4>
-         )
-       }
-    }
-  }
-
-  componentDidMount() {
-    getHomeRepairs()
-    .then(data => this.setState({homeRepairs: data}))
-    .catch(error => this.setState({error: error.message}))
-  }
-
-  returnProjects = (projects, category) => {
-     if(projects.length > 0) {
-      let filteredProjects = projects.filter(project => {
-          let lowerCaseArea = project.areaOfHome.toLowerCase()
-          let lowerCaseCategory = category.toLowerCase()
-            if(lowerCaseCategory === lowerCaseArea) {
-               return project;
-            }
-          })
-       return (
-       <Projects 
-       category={filteredProjects} />
-       )
-    }
-    }
-
-    findVideo = (repairs, project) => {
-      if(repairs.length > 0) {
-        let foundVideo = repairs.find(repair => {
-          if(project === repair.project) {
-            return repair
-          }
-        })
+      } else {
         return (
-          <Videos toTry={this.addToTry} repairVideo={foundVideo} />
+          <h4>It seems you have not added a project yet. Get your tools and get going!</h4>
         )
       }
     }
+  }
 
-    renderCatchError = (error) => {
-      if(error) {
-        return <CatchError error={error} />
+componentDidMount() {
+  getHomeRepairs()
+  .then(data => this.setState({homeRepairs: data}))
+  .catch(error => this.setState({error: error.message}))
+}
+
+returnProjects = (projects, category) => {
+    if (projects.length > 0) {
+    let filteredProjects = projects.filter(project => {
+      let lowerCaseArea = project.areaOfHome.toLowerCase()
+      let lowerCaseCategory = category.toLowerCase()
+      if(lowerCaseCategory === lowerCaseArea) {
+        return project;
       }
-    }
+    })
+    return (
+    <Projects 
+    category={filteredProjects} />
+    )
+  }
+}
 
-  render() {
+findVideo = (repairs, project) => {
+  if (repairs.length > 0) {
+  let foundVideo = repairs.find(repair => {
+    if(project === repair.project) {
+      return repair;
+    }
+  })
+    return (
+      <Videos toTry={this.addToTry} repairVideo={foundVideo} />
+    )
+  }
+}
+
+renderCatchError = (error) => {
+  if(error) {
+    return <CatchError error={error} />
+  }
+}
+
+render() {
     return (
       <div className="App">
         <NavBar />

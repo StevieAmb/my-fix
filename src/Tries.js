@@ -1,5 +1,6 @@
 import React from 'react';
 import Project from './Components/Project';
+import PropTypes from 'prop-types';
 
 const Tries = ({category}) => {
   let toTries = category.map(category => {
@@ -12,11 +13,15 @@ const Tries = ({category}) => {
     )
   })
   return (
-    <div className='try-container'>
+    <section className="try-container">
       {toTries}
-    </div>
+    </section>
   )
 }
 
 
 export default Tries;
+
+Tries.propTypes = {
+  category: PropTypes.arrayOf(PropTypes.object.isRequired)
+}
