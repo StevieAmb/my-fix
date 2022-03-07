@@ -1,5 +1,5 @@
-Click [HERE](https://frontend.turing.edu/projects/module-3/showcase.html) to view the project spec
-Click [HERE](https://polar-spire-35161.herokuapp.com/) to view the deployed site
+- Click [HERE](https://frontend.turing.edu/projects/module-3/showcase.html) to view the project spec
+- Click [HERE](https://polar-spire-35161.herokuapp.com/) to view the deployed site
 
 ### Learning Goals
 With this solo project, I gathered everything I learned about
