@@ -7,6 +7,8 @@ describe('Error/Broken Page', () => {
  it('User should see the nav bar, with title and blurb', () => {
   cy.get('.nav-bar').contains('MY FIXINGS')
   .contains('For those who need to justify the amount of tools they own...')
+  .get('.page-title')
+  .contains('Click Me To Go Home')
 })
 
 it('User should see "My Projects" button on nav bar', () => {
