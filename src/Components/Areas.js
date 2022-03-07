@@ -21,5 +21,5 @@ const Areas = ({areas}) => {
 export default Areas; 
 
 Areas.propTypes = {
-  areas: PropTypes.array.isRequired
+  areas: PropTypes.arrayOf(PropTypes.string.isRequired)
 }
