@@ -13,7 +13,7 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      areas: ['kitchen', 'bathroom', 'bedroom', 'miscellaneous'],
+      areas: ['kitchen', 'bathroom', 'bedroom', 'misc'],
       homeRepairs: [],
       error: '',
       toTry: []
