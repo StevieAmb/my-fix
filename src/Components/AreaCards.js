@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 import bedroom from '../bedroom.jpeg';
 import bathroom from '../bathroom.jpeg';
 import kitchen from '../kitchen.jpeg';
-import miscellaneous from '../miscellaneous.jpeg'
+import miscellaneous from '../miscellaneous.jpeg';
 
 const AreaCards = ({homeArea}) => {
   let images = [bedroom, bathroom, kitchen, miscellaneous]
