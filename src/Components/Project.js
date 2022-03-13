@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import '../Project.css';
 
 const Project = ({name}) => {
+  
   return (
     <NavLink className="project-card" to={`/video/${name}`}>
       <h1>{name}</h1>
