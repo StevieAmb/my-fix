@@ -38,11 +38,11 @@ I, and this app, believe in you!
 
 - React 
 - JSX
-- Cypress Testing
+- Cypress 
 - HTML5
 - SASS/CSS
 - JavaScript
-- API Fetch Calls
+- AJAX
 - React Router
 - Express
 - Nodemon
