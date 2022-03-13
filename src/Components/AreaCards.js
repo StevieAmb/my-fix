@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import bedroom from '../bedroom.jpeg';
 import bathroom from '../bathroom.jpeg';
-import kitchen from '../kitchen.jpeg';
+import kitchen from '../kerstin_kitchen_01.jpeg';
 import miscellaneous from '../miscellaneous.jpeg';
 
 const AreaCards = ({homeArea}) => {
