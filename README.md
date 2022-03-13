@@ -74,7 +74,7 @@ to complete the projects.
 
 
 ## See the Site in Action! 
-![Walk Through Site](https://media.giphy.com/media/g2TawNp8uEQ7LIijbo/giphy.gif)
+![Walk Through Site](https://media.giphy.com/media/UFTUJMlsVP72osB6ND/giphy.gif)
 
 Don't feel bad about your tools.
 Those who misunderstand are fools.
