@@ -4,17 +4,15 @@ import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import bedroom from '../bedroom.jpeg';
 import bathroom from '../bathroom.jpeg';
-import kitchen from '../Kitchen.jpeg';
+import kitchen from '../kitchen.jpeg';
+import miscellaneous from '../miscellaneous.jpeg'
 
 const AreaCards = ({homeArea}) => {
-  let images = [bedroom, bathroom, kitchen]
+  let images = [bedroom, bathroom, kitchen, miscellaneous]
   let areaPics = images.map(image => {
     if(image.includes(homeArea)) {
       return <img key={image} className="area-photo" src={`${image}`} alt={homeArea}/>
     } 
-    if(!image.includes(homeArea) && image.includes('9j')) {
-      return <img key={image} className="area-photo" src={`${image}`} alt={homeArea}/>
-    }
   })
   return (
     <NavLink className="area-card" to={`/${homeArea}/home-improvement-repairs`} >
