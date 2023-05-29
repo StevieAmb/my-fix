@@ -52,6 +52,7 @@ componentDidMount() {
   getHomeRepairs()
   .then(data => this.setState({homeRepairs: data}))
   .catch(error => this.setState({error: error.message}))
+  console.log("is this working", this.state.homeRepairs)
 }
 
 returnProjects = (projects, category) => {
@@ -108,7 +109,3 @@ render() {
 
 export default App;
 
-
-
-//And then, when the project buttons are clicked, that's when it takes you to the page with the video,
-//Which can be on the same page?

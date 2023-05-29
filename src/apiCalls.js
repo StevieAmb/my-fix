@@ -1,5 +1,5 @@
 const getHomeRepairs = () => {
-  return fetch('https://young-everglades-39392.herokuapp.com/')
+  return fetch('https://my-fixing.netlify.app/')
   .then(response => {
     if(!response.ok) {
       if(response.status >= 500) {
