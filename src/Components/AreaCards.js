@@ -11,7 +11,7 @@ const AreaCards = ({homeArea}) => {
   let images = [bedroom, bathroom, kitchen, miscellaneous]
   let areaPics = images.map(image => {
     if(image.includes(homeArea)) {
-      return <img key={image} className="area-photo" src={`${image}`} alt={homeArea}/>
+      return <img key={image} className="area-photo" src={`${image}`} alt={homeArea} width='400' height='400'/>
     } 
   })
   return (

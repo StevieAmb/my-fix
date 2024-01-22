@@ -1,6 +1,5 @@
 .area-cards-container {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  row-gap: 3em;
+  display: flex;
+  gap: 3em;
   justify-items: center;
 }

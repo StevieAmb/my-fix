@@ -95,13 +95,12 @@ render() {
       <div className="App">
         <NavBar />
         <Switch>
-        <Route exact path="/" render={() => <Areas areas={this.state.areas} /> } />
-        <Route exact path="/:area/home-improvement-repairs" render={( { match } ) =>  this.returnProjects(this.state.homeRepairs, match.params.area)} />
-        <Route exact path="/video/:project" render={( { match }) => this.findVideo(this.state.homeRepairs, match.params.project)} />
-        <Route exact path="/tryThis" render={() => this.listProjectsToTry(this.state.homeRepairs, this.state.toTry)} />
-        <Route render={() => <CatchError error={this.state.error} /> } />
+          <Route exact path="/" render={() => <Areas areas={this.state.areas} /> } />
+          <Route exact path="/:area/home-improvement-repairs" render={( { match } ) =>  this.returnProjects(this.state.homeRepairs, match.params.area)} />
+          <Route exact path="/video/:project" render={( { match }) => this.findVideo(this.state.homeRepairs, match.params.project)} />
+          <Route exact path="/tryThis" render={() => this.listProjectsToTry(this.state.homeRepairs, this.state.toTry)} />
         </Switch>
-        <Route render={() => this.renderCatchError(this.state.error)} />
+        <Route render={() => <CatchError error={this.state.error} /> } />
       </div>
     )
   }
