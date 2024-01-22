@@ -3,15 +3,15 @@ import '../AreaCards.css';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import bedroom from '../images/bedroom.jpeg';
-import bathroom from '../images/bathroom.jpeg'
-import kitchen from '../images/kerstin_kitchen_01.jpeg'
+import bathroom from '../images/bathroom.jpeg';
+import kitchen from '../images/kerstin_kitchen_01.jpeg';
 import miscellaneous from '../images/miscellaneous.jpeg';
 
 const AreaCards = ({homeArea}) => {
   let images = [bedroom, bathroom, kitchen, miscellaneous]
   let areaPics = images.map(image => {
     if(image.includes(homeArea)) {
-      return <img key={image} className="area-photo" src={`${image}`} alt={homeArea} width='400' height='400'/>
+      return <img key={image} className="area-photo" src={`${image}`} alt={homeArea} width='340' height='340'/>
     } 
   })
   return (

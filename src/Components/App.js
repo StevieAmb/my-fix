@@ -51,7 +51,6 @@ componentDidMount() {
   getHomeRepairs()
   .then(data => this.setState({homeRepairs: data}))
   .catch(error => this.setState({error: error.message}))
-  console.log("is this working", this.state.homeRepairs)
 }
 
 returnProjects = (projects, category) => {
@@ -93,8 +92,7 @@ render() {
     return (
       <div className="App">
         <NavBar />
-        <div>
-          
+        <div className='hero-image'>
         </div>
         <Switch>
           <Route exact path="/" render={() => <Areas areas={this.state.areas} /> } />

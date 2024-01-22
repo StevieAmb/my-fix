@@ -1,0 +1,5 @@
+.hero-image {
+  background-image: ur('../images/kerstin_kitchen_01.jpeg');
+  height: 400px;
+  width: 400px;
+}
