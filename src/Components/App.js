@@ -6,7 +6,6 @@ import Videos from '../Videos';
 import Projects from './Projects';
 import Tries from '../Tries';
 import { Route, Switch } from 'react-router-dom';
-import '../App.css';
 import CatchError from '../CatchError';
 
 class App extends Component {
@@ -94,6 +93,9 @@ render() {
     return (
       <div className="App">
         <NavBar />
+        <div>
+          
+        </div>
         <Switch>
           <Route exact path="/" render={() => <Areas areas={this.state.areas} /> } />
           <Route exact path="/:area/home-improvement-repairs" render={( { match } ) =>  this.returnProjects(this.state.homeRepairs, match.params.area)} />

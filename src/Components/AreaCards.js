@@ -2,10 +2,10 @@ import React from 'react';
 import '../AreaCards.css';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
-import bedroom from '../bedroom.jpeg';
-import bathroom from '../bathroom.jpeg';
-import kitchen from '../kerstin_kitchen_01.jpeg';
-import miscellaneous from '../miscellaneous.jpeg';
+import bedroom from '../images/bedroom.jpeg';
+import bathroom from '../images/bathroom.jpeg'
+import kitchen from '../images/kerstin_kitchen_01.jpeg'
+import miscellaneous from '../images/miscellaneous.jpeg';
 
 const AreaCards = ({homeArea}) => {
   let images = [bedroom, bathroom, kitchen, miscellaneous]
