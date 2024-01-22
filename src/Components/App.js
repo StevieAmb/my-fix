@@ -6,7 +6,6 @@ import Videos from '../Videos';
 import Projects from './Projects';
 import Tries from '../Tries';
 import { Route, Switch } from 'react-router-dom';
-import '../App.css';
 import CatchError from '../CatchError';
 
 class App extends Component {
@@ -52,7 +51,6 @@ componentDidMount() {
   getHomeRepairs()
   .then(data => this.setState({homeRepairs: data}))
   .catch(error => this.setState({error: error.message}))
-  console.log("is this working", this.state.homeRepairs)
 }
 
 returnProjects = (projects, category) => {
@@ -94,14 +92,15 @@ render() {
     return (
       <div className="App">
         <NavBar />
+        <div className='hero-image'>
+        </div>
         <Switch>
-        <Route exact path="/" render={() => <Areas areas={this.state.areas} /> } />
-        <Route exact path="/:area/home-improvement-repairs" render={( { match } ) =>  this.returnProjects(this.state.homeRepairs, match.params.area)} />
-        <Route exact path="/video/:project" render={( { match }) => this.findVideo(this.state.homeRepairs, match.params.project)} />
-        <Route exact path="/tryThis" render={() => this.listProjectsToTry(this.state.homeRepairs, this.state.toTry)} />
-        <Route render={() => <CatchError error={this.state.error} /> } />
+          <Route exact path="/" render={() => <Areas areas={this.state.areas} /> } />
+          <Route exact path="/:area/home-improvement-repairs" render={( { match } ) =>  this.returnProjects(this.state.homeRepairs, match.params.area)} />
+          <Route exact path="/video/:project" render={( { match }) => this.findVideo(this.state.homeRepairs, match.params.project)} />
+          <Route exact path="/tryThis" render={() => this.listProjectsToTry(this.state.homeRepairs, this.state.toTry)} />
         </Switch>
-        <Route render={() => this.renderCatchError(this.state.error)} />
+        <Route render={() => <CatchError error={this.state.error} /> } />
       </div>
     )
   }

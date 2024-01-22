@@ -9,7 +9,6 @@ const NavBar = () => {
         <NavLink className="page-title" to="/">
           <h1>MY FIXINGS</h1>
           <p>Save money. Justify the amount of tools you own.</p>
-          <h5>Click Me To Go Home</h5>
         </NavLink>
       </div>
       <div className="user-projects">
