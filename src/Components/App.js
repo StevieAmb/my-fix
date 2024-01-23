@@ -8,7 +8,7 @@ import Tries from '../Tries';
 import { Route, Switch } from 'react-router-dom';
 import CatchError from '../CatchError';
 
-class App extends Component {
+class App extends React.Component {
   constructor() {
     super()
     this.state = {

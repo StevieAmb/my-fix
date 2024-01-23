@@ -23,12 +23,12 @@ const Projects = ({category}) => {
 export default Projects;
 
 Projects.propTypes = {
-  category: PropTypes.shape({
+  category: PropTypes.shape([{
     id: PropTypes.number.isRequired,
     areaOfHome: PropTypes.string.isRequired,
     project: PropTypes.string.isRequired,
     toolsNeeded: PropTypes.arrayOf(PropTypes.string.isRequired),
     videos: PropTypes.string.isRequired
-  })
+  }])
 }
 
