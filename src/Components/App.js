@@ -6,7 +6,7 @@ import Videos from '../Videos';
 import Projects from './Projects';
 import Tries from '../Tries';
 import { Route, Switch } from 'react-router-dom';
-import CatchError from '../CatchError';
+import CatchError from './CatchError';
 
 class App extends React.Component {
   constructor() {
