@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import './Video.css';
 
 const Video = ({video, projToTry, name, tools}) => {
-  let toolsForProj = tools.map(tool => {
+  let toolsForProj = tools.map((tool, index) => {
     return (
-      <li>{tool}</li>
+      <li key={tool+index}>{tool}</li>
     )
   })
   return ( 
