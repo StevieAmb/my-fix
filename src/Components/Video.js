@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Video.css';
+import '../styling/Video.css';
 
 const Video = ({video, projToTry, name, tools}) => {
   let toolsForProj = tools.map((tool, index) => {

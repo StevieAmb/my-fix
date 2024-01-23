@@ -1,5 +1,5 @@
 import React from 'react';
-import '../AreaCards.css';
+import '../styling/AreaCards.css';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import bedroom from '../images/bedroom.jpeg';
