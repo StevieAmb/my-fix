@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Video from './Video';
+import Video from './Video'
 
 const Videos = ({repairVideo, toTry}) => {
   return (

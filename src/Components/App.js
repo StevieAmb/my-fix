@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import Areas from '../Components/Areas';
 import  getHomeRepairs  from '../apiCalls';
 import NavBar from './NavBar';
-import Videos from '../Videos';
+import Videos from './Videos';
 import Projects from './Projects';
-import Tries from '../Tries';
+import Tries from './Tries';
 import { Route, Switch } from 'react-router-dom';
 import CatchError from './CatchError';
 
