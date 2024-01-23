@@ -56,10 +56,8 @@ componentDidMount() {
 returnProjects = (projects, category) => {
   let lowerCaseCategory;
   let lowerCaseArea;
-  console.log(category)
   if (projects.length > 0) {
     var filteredProjects = projects.filter(project => {
-      console.log(project.areaOfHome.toLowerCase())
       lowerCaseCategory = category.toLowerCase()
       lowerCaseArea = project.areaOfHome.toLowerCase()
     if (lowerCaseCategory === lowerCaseArea) {
@@ -104,7 +102,7 @@ render() {
           <Route exact path="/video/:project" render={( { match }) => this.findVideo(this.state.homeRepairs, match.params.project)} />
           <Route exact path="/tryThis" render={() => this.listProjectsToTry(this.state.homeRepairs, this.state.toTry)} />
         </Switch>
-        <Route render={() => <CatchError error={this.state.error} /> } />
+        {/* <Route render={() => <CatchError error={this.state.error} /> } /> */}
       </div>
     )
   }
