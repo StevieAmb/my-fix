@@ -54,28 +54,32 @@ componentDidMount() {
 }
 
 returnProjects = (projects, category) => {
-    if (projects.length > 0) {
-    let filteredProjects = projects.filter(project => {
-      let lowerCaseArea = project.areaOfHome.toLowerCase()
-      let lowerCaseCategory = category.toLowerCase()
-      if(lowerCaseCategory === lowerCaseArea) {
-        return project;
-      }
+  let lowerCaseCategory;
+  let lowerCaseArea;
+  console.log(category)
+  if (projects.length > 0) {
+    var filteredProjects = projects.filter(project => {
+      console.log(project.areaOfHome.toLowerCase())
+      lowerCaseCategory = category.toLowerCase()
+      lowerCaseArea = project.areaOfHome.toLowerCase()
+    if (lowerCaseCategory === lowerCaseArea) {
+      return project
+    }
     })
     return (
     <Projects 
     category={filteredProjects} />
+    )
+  } else {
+    return (
+    <p>Can't seem to find any projects for you to do. Go back home.</p>
     )
   }
 }
 
 findVideo = (repairs, project) => {
   if (repairs.length > 0) {
-  let foundVideo = repairs.find(repair => {
-    if(project === repair.project) {
-      return repair;
-    }
-  })
+  let foundVideo = repairs.find(repair => repair.project === project)
     return (
       <Videos toTry={this.addToTry} repairVideo={foundVideo} />
     )

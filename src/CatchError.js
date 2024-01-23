@@ -5,7 +5,7 @@ const CatchError = ({error}) => {
   return (
     <div className="catch-error">
       <h3>{error}</h3>
-      <p>Something is clearly broken. Click "My FIXINGS" in the grey bar above and see if you can fix it for me, will ya? </p>
+      <p>Something is clearly broken. Go back HOME and see if you can fix it for me, will ya? </p>
     </div>
   )
 }
