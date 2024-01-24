@@ -11,12 +11,12 @@ const AreaCards = ({homeArea}) => {
   let images = [bedroom, bathroom, kitchen, miscellaneous]
   let areaPics = images.map(image => {
     if(image.includes(homeArea)) {
-      return <img key={image} className="area-photo" src={`${image}`} alt={homeArea} width='410' height='340'/>
+      return <img key={image} className="area-photo" src={`${image}`} alt={homeArea} width='600' height='380'/>
     } 
   })
   return (
     <NavLink className="area-card" to={`/${homeArea}/home-improvement-repairs`} >
-      <div>
+      <div className='area-card-square'>
         {areaPics}
         <h1 className='home-area'>{homeArea.toUpperCase()}</h1>
       </div>
