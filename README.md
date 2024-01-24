@@ -4,7 +4,8 @@
 ### Learning Goals
 With this solo project, I gathered everything I learned about
 - React
-- Router
+- React Router
+- Node.js & Express.js
 - Asynchronous JavaScript
 - End to end testing with Cypress
 
