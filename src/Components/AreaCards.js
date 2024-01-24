@@ -16,7 +16,7 @@ const AreaCards = ({homeArea}) => {
   })
   return (
     <NavLink className="area-card" to={`/${homeArea}/home-improvement-repairs`} >
-      <div>
+      <div className='area-card-square'>
         {areaPics}
         <h1 className='home-area'>{homeArea.toUpperCase()}</h1>
       </div>
