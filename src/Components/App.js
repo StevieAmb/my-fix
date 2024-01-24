@@ -19,6 +19,12 @@ class App extends React.Component {
     }
   }
 
+  componentDidMount() {
+    getHomeRepairs()
+    .then(data => this.setState({homeRepairs: data}))
+    .catch(error => this.setState({error: error.message}))
+  }
+
   addToTry = (projectVid) => {
     if (!this.state.toTry.includes(projectVid)) {
       this.setState({toTry: [...this.state.toTry, projectVid] })
@@ -46,12 +52,6 @@ class App extends React.Component {
       }
     }
   }
-
-componentDidMount() {
-  getHomeRepairs()
-  .then(data => this.setState({homeRepairs: data}))
-  .catch(error => this.setState({error: error.message}))
-}
 
 returnProjects = (projects, category) => {
   let lowerCaseCategory;
