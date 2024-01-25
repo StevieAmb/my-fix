@@ -13,7 +13,7 @@ const NavBar = () => {
       </div>
       <div className="user-projects">
         <NavLink className="my-projects" to="/tryThis">
-          <button className="my-projects">My Projects</button>
+          <p>My Saved Projects</p>
         </NavLink>
       </div>
     </div>   

@@ -1,13 +1,13 @@
 .nav-bar {
   display: flex;
   justify-content: space-between;
-  background-color: rgb(139, 215, 207);
+  background-color: rgb(245, 218, 222);
   margin-bottom: 10%;
   box-shadow: -5px 5px 4px lightgray;
 }
 .page-title {
   text-decoration: none;
-  color: #453643;
+  color: black;
   font-size: larger;
 }
 
@@ -27,16 +27,13 @@
 }
 
 .my-projects {
-    margin-bottom: 3%;;
-    margin-left: 0%;
-    margin-top: 33%;
-    height: 34%;
-    color: white;
-    font-size: 2vh;
-    font-size: 1.1vw;
-    flex-wrap: wrap;
-    width: 80%;
-    background-color:  #453643;
+  display: flex;
+  text-align: center;
+  text-decoration: none;
+  width: 8rem;
+  height: 4rem;
+  color: white;
+  background-color:  #453643;
 }
 
 @media only screen and (max-width: 650px) {
