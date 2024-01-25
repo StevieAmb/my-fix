@@ -1,5 +1,5 @@
 .area-card {
-  background-color: #28112B;
+  background-color: #5b6c5d;
   height: 100%;
   width: 35%;
   text-align: center;
@@ -7,7 +7,7 @@
 }
 
 .area-card:hover {
-  background-color: #788475;
+  background-color: #453643;
   box-shadow: 5px 5px 5px #453643;
 }
 
