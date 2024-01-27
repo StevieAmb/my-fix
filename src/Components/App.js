@@ -3,8 +3,8 @@ import Areas from '../Components/Areas';
 import  getHomeRepairs  from '../apiCalls';
 import NavBar from './NavBar';
 import Videos from './Videos';
-import Projects from './Projects';
-import Tries from './Tries';
+import Projects from './ProjectsContainer';
+import Tries from './SavedProjects';
 import { Route, Switch } from 'react-router-dom';
 import CatchError from './CatchError';
 
@@ -20,9 +20,11 @@ const App = () =>  {
       .catch(error => setError(error))
     },[])
 
+    console.log(homeRepairs)
+
   const addToTry = (projectVid) => {
-    if (!this.state.toTry.includes(projectVid)) {
-      this.setState({toTry: [...this.state.toTry, projectVid] })
+    if (!toTry.includes(projectVid)) {
+      this.setToTry([...toTry, projectVid] )
     }
   }
 
@@ -74,7 +76,7 @@ const findVideo = (repairs, project) => {
   if (repairs.length > 0) {
   let foundVideo = repairs.find(repair => repair.project === project)
     return (
-      <Videos toTry={this.addToTry} repairVideo={foundVideo} />
+      <Videos toTry={addToTry} repairVideo={foundVideo} />
     )
   }
 }
@@ -92,9 +94,9 @@ const renderCatchError = (error) => {
       </div>
       <Switch>
         <Route exact path="/" render={() => <Areas areas={areas} /> } />
-        <Route exact path="/:area/home-improvement-repairs" render={( { match } ) =>  this.returnProjects(homeRepairs, match.params.area)} />
-        <Route exact path="/video/:project" render={( { match }) => this.findVideo(this.state.homeRepairs, match.params.project)} />
-        <Route exact path="/tryThis" render={() => this.listProjectsToTry(this.state.homeRepairs, this.state.toTry)} />
+        <Route exact path="/:area/home-improvement-repairs" render={( { match } ) =>  returnProjects(homeRepairs, match.params.area)} />
+        <Route exact path="/video/:project" render={( { match }) => findVideo(homeRepairs, match.params.project)} />
+        <Route exact path="/tryThis" render={() => listProjectsToTry(homeRepairs, this.state.toTry)} />
       </Switch>
       {/* <Route render={() => <CatchError error={this.state.error} /> } /> */}
     </div>
