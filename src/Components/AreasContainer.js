@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import AreaCards from '../Components/AreaCards';
+import AreaCards from './AreaCards';
 import '../styling/Areas.css';
 
-const Areas = ({areas}) => {
+const AreasContainer = ({areas}) => {
   let allAreas = areas.map(area => {
     return (
       <AreaCards 
@@ -18,8 +18,8 @@ const Areas = ({areas}) => {
   )
 }
 
-export default Areas; 
+export default AreasContainer; 
 
-Areas.propTypes = {
+AreasContainer.propTypes = {
   areas: PropTypes.arrayOf(PropTypes.string.isRequired)
 }

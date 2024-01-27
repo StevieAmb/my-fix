@@ -2,8 +2,8 @@ import React from 'react';
 import Project from './Project';
 import PropTypes from 'prop-types';
 
-const Tries = ({category}) => {
-  let toTries = category.map(category => {
+const SavedProjects = ({category}) => {
+  let savedProjects = category.map(category => {
     return (
       <Project
         key={category.id}
@@ -15,14 +15,14 @@ const Tries = ({category}) => {
   })
   return (
     <section className="try-container">
-          {toTries}
+          {savedProjects}
     </section>
   )
 }
 
 
-export default Tries;
+export default SavedProjects;
 
-Tries.propTypes = {
+SavedProjects.propTypes = {
   category: PropTypes.arrayOf(PropTypes.object.isRequired)
 }
