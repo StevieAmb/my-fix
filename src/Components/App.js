@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useEffect, useState } from 'react';
 import Areas from '../Components/Areas';
 import  getHomeRepairs  from '../apiCalls';
 import NavBar from './NavBar';
@@ -8,30 +8,25 @@ import Tries from './Tries';
 import { Route, Switch } from 'react-router-dom';
 import CatchError from './CatchError';
 
-class App extends React.Component {
-  constructor() {
-    super()
-    this.state = {
-      areas: ['kitchen', 'bathroom', 'bedroom', 'misc'],
-      homeRepairs: [],
-      error: '',
-      toTry: []
-    }
-  }
+const App = () =>  {
+    let areas =  ['kitchen', 'bathroom', 'bedroom', 'misc']
+    let [error, setError ] = useState('')
+    let [toTry, setToTry] = useState([])
+    let [homeRepairs, setHomeRepairs] = useState([])
 
-  componentDidMount() {
-    getHomeRepairs()
-    .then(data => this.setState({homeRepairs: data}))
-    .catch(error => this.setState({error: error.message}))
-  }
+    useEffect(() => {
+      getHomeRepairs()
+      .then(data => setHomeRepairs(data))
+      .catch(error => setError(error))
+    },[])
 
-  addToTry = (projectVid) => {
+  const addToTry = (projectVid) => {
     if (!this.state.toTry.includes(projectVid)) {
       this.setState({toTry: [...this.state.toTry, projectVid] })
     }
   }
 
-  listProjectsToTry = (projects, tryVideo) => {
+  const listProjectsToTry = (projects, tryVideo) => {
     let triedProj = []
     if(projects.length > 0) {
       tryVideo.forEach(video => {
@@ -53,7 +48,7 @@ class App extends React.Component {
     }
   }
 
-returnProjects = (projects, category) => {
+const returnProjects = (projects, category) => {
   let lowerCaseCategory;
   let lowerCaseArea;
   if (projects.length > 0) {
@@ -75,7 +70,7 @@ returnProjects = (projects, category) => {
   }
 }
 
-findVideo = (repairs, project) => {
+const findVideo = (repairs, project) => {
   if (repairs.length > 0) {
   let foundVideo = repairs.find(repair => repair.project === project)
     return (
@@ -84,28 +79,26 @@ findVideo = (repairs, project) => {
   }
 }
 
-renderCatchError = (error) => {
+const renderCatchError = (error) => {
   if(error) {
     return <CatchError error={error} />
   }
 }
 
-render() {
-    return (
-      <div className="App">
-        <NavBar />
-        <div className='hero-image'>
-        </div>
-        <Switch>
-          <Route exact path="/" render={() => <Areas areas={this.state.areas} /> } />
-          <Route exact path="/:area/home-improvement-repairs" render={( { match } ) =>  this.returnProjects(this.state.homeRepairs, match.params.area)} />
-          <Route exact path="/video/:project" render={( { match }) => this.findVideo(this.state.homeRepairs, match.params.project)} />
-          <Route exact path="/tryThis" render={() => this.listProjectsToTry(this.state.homeRepairs, this.state.toTry)} />
-        </Switch>
-        {/* <Route render={() => <CatchError error={this.state.error} /> } /> */}
+  return (
+    <div className="App">
+      <NavBar />
+      <div className='hero-image'>
       </div>
-    )
-  }
+      <Switch>
+        <Route exact path="/" render={() => <Areas areas={areas} /> } />
+        <Route exact path="/:area/home-improvement-repairs" render={( { match } ) =>  this.returnProjects(homeRepairs, match.params.area)} />
+        <Route exact path="/video/:project" render={( { match }) => this.findVideo(this.state.homeRepairs, match.params.project)} />
+        <Route exact path="/tryThis" render={() => this.listProjectsToTry(this.state.homeRepairs, this.state.toTry)} />
+      </Switch>
+      {/* <Route render={() => <CatchError error={this.state.error} /> } /> */}
+    </div>
+  )
 }
 
 export default App;
