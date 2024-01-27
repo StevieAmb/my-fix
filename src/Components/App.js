@@ -1,37 +1,34 @@
-import React, { Component } from 'react';
-import Areas from '../Components/Areas';
+import React, { useEffect, useState } from 'react';
+import AreasContainer from './AreasContainer';
 import  getHomeRepairs  from '../apiCalls';
 import NavBar from './NavBar';
 import Videos from './Videos';
-import Projects from './Projects';
-import Tries from './Tries';
+import Projects from './ProjectsContainer';
+import SavedProjects from './SavedProjects';
 import { Route, Switch } from 'react-router-dom';
 import CatchError from './CatchError';
 
-class App extends React.Component {
-  constructor() {
-    super()
-    this.state = {
-      areas: ['kitchen', 'bathroom', 'bedroom', 'misc'],
-      homeRepairs: [],
-      error: '',
-      toTry: []
+const App = () =>  {
+    let areas =  ['kitchen', 'bathroom', 'bedroom', 'misc']
+    let [error, setError ] = useState('')
+    let [saved, setToSaved] = useState([])
+    let [homeRepairs, setHomeRepairs] = useState([])
+
+    useEffect(() => {
+      getHomeRepairs()
+      .then(data => setHomeRepairs(data))
+      .catch(error => setError(error))
+    },[])
+
+    console.log(homeRepairs)
+
+  const addToSaved = (projectVid) => {
+    if (!saved.includes(projectVid)) {
+      setToSaved([...saved, projectVid] )
     }
   }
 
-  componentDidMount() {
-    getHomeRepairs()
-    .then(data => this.setState({homeRepairs: data}))
-    .catch(error => this.setState({error: error.message}))
-  }
-
-  addToTry = (projectVid) => {
-    if (!this.state.toTry.includes(projectVid)) {
-      this.setState({toTry: [...this.state.toTry, projectVid] })
-    }
-  }
-
-  listProjectsToTry = (projects, tryVideo) => {
+  const listProjectsToTry = (projects, tryVideo) => {
     let triedProj = []
     if(projects.length > 0) {
       tryVideo.forEach(video => {
@@ -43,7 +40,7 @@ class App extends React.Component {
       })
       if (triedProj.length > 0) {
         return (
-          <Tries category={triedProj} />
+          <SavedProjects category={triedProj} />
         )
       } else {
         return (
@@ -53,7 +50,7 @@ class App extends React.Component {
     }
   }
 
-returnProjects = (projects, category) => {
+const returnProjects = (projects, category) => {
   let lowerCaseCategory;
   let lowerCaseArea;
   if (projects.length > 0) {
@@ -75,37 +72,35 @@ returnProjects = (projects, category) => {
   }
 }
 
-findVideo = (repairs, project) => {
+const findVideo = (repairs, project) => {
   if (repairs.length > 0) {
   let foundVideo = repairs.find(repair => repair.project === project)
     return (
-      <Videos toTry={this.addToTry} repairVideo={foundVideo} />
+      <Videos toTry={addToSaved} repairVideo={foundVideo} />
     )
   }
 }
 
-renderCatchError = (error) => {
+const renderCatchError = (error) => {
   if(error) {
     return <CatchError error={error} />
   }
 }
 
-render() {
-    return (
-      <div className="App">
-        <NavBar />
-        <div className='hero-image'>
-        </div>
-        <Switch>
-          <Route exact path="/" render={() => <Areas areas={this.state.areas} /> } />
-          <Route exact path="/:area/home-improvement-repairs" render={( { match } ) =>  this.returnProjects(this.state.homeRepairs, match.params.area)} />
-          <Route exact path="/video/:project" render={( { match }) => this.findVideo(this.state.homeRepairs, match.params.project)} />
-          <Route exact path="/tryThis" render={() => this.listProjectsToTry(this.state.homeRepairs, this.state.toTry)} />
-        </Switch>
-        {/* <Route render={() => <CatchError error={this.state.error} /> } /> */}
+  return (
+    <div className="App">
+      <NavBar />
+      <div className='hero-image'>
       </div>
-    )
-  }
+      <Switch>
+        <Route exact path="/" render={() => <AreasContainer areas={areas} /> } />
+        <Route exact path="/:area/home-improvement-repairs" render={( { match } ) =>  returnProjects(homeRepairs, match.params.area)} />
+        <Route exact path="/video/:project" render={( { match }) => findVideo(homeRepairs, match.params.project)} />
+        <Route exact path="/tryThis" render={() => listProjectsToTry(homeRepairs, saved)} />
+      </Switch>
+      {/* <Route render={() => <CatchError error={this.state.error} /> } /> */}
+    </div>
+  )
 }
 
 export default App;
