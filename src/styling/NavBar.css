@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   background-color: rgb(139, 181, 160);
-  margin-bottom: 10%;
+  margin-bottom: 8%;
   box-shadow: -5px 5px 4px lightgray;
 }
 .page-title {
