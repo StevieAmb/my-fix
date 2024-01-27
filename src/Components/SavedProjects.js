@@ -3,7 +3,6 @@ import Project from './Project';
 import PropTypes from 'prop-types';
 
 const Tries = ({category}) => {
-  console.log(category)
   let toTries = category.map(category => {
     return (
       <Project
