@@ -13,6 +13,9 @@ const App = () =>  {
     let [error, setError ] = useState('')
     let [saved, setToSaved] = useState([])
     let [homeRepairs, setHomeRepairs] = useState([])
+    let [loading, setLoading] = useState()
+
+
 
     useEffect(() => {
       getHomeRepairs()
@@ -63,13 +66,9 @@ const returnProjects = (projects, category) => {
     })
     return (
     <Projects 
-    category={filteredProjects} />
+    filteredProjects={filteredProjects} />
     )
-  } else {
-    return (
-    <p>Can't seem to find any projects for you to do. Go back home.</p>
-    )
-  }
+  } 
 }
 
 const findVideo = (repairs, project) => {
@@ -81,11 +80,11 @@ const findVideo = (repairs, project) => {
   }
 }
 
-const renderCatchError = (error) => {
-  if(error) {
-    return <CatchError error={error} />
-  }
-}
+// const renderCatchError = (error) => {
+//   if(error) {
+//     return <CatchError error={error} />
+//   }
+// }
 
   return (
     <div className="App">
