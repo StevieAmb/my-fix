@@ -80,11 +80,11 @@ const findVideo = (repairs, project) => {
   }
 }
 
-const renderCatchError = (error) => {
-  if(error) {
-    return <CatchError error={error} />
-  }
-}
+// const renderCatchError = (error) => {
+//   if(error) {
+//     return <CatchError error={error} />
+//   }
+// }
 
   return (
     <div className="App">
