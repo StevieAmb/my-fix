@@ -3,16 +3,16 @@ import Project from './Project';
 import PropTypes from 'prop-types';
 import '../styling/Projects.css';
 
-const Projects = ({category}) => {
-  let allProjects = category.map(category => {
+const Projects = ({filteredProjects}) => {
+  let allProjects = filteredProjects ? filteredProjects.map((project, index) => {
     return (
       <Project 
-        key={category.name}
-        id={category.id}
-        name={category.project}
+        key={`${project.name} + ${project.id}`}
+        id={project.id}
+        name={project.project}
       />
     )
-  })
+  }) : 'Please wait while your projects load onto the screen. If need be, please refresh the page after 10 secs.'
   return (
     <div className="projects-container">
       {allProjects}
