@@ -70,7 +70,10 @@ const returnProjects = (projects, category) => {
     )
   } else {
     return (
-    <p>The house is building, thank you for your patience...</p>
+      <div>
+        <p>Building, building, building...</p>
+        <p>Thank you for your patience.</p>
+      </div>
     )
   }
 }
