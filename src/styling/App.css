@@ -57,3 +57,7 @@ table {
   height: 400px;
   width: 400px;
 }
+
+.loading-message {
+	text-align: center;
+}
