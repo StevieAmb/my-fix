@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import '../styling/Projects.css';
 
 const Projects = ({filteredProjects}) => {
-  let allProjects = filteredProjects ? filteredProjects.map((project, index) => {
+  let allProjects = filteredProjects.map((project, index) => {
     return (
       <Project 
         key={`${project.name} + ${project.id}`}
@@ -12,7 +12,7 @@ const Projects = ({filteredProjects}) => {
         name={project.project}
       />
     )
-  }) : 'Please wait while your projects load onto the screen. If need be, please refresh the page after 10 secs.'
+  }) 
   return (
     <div className="projects-container">
       {allProjects}

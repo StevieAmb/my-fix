@@ -68,7 +68,11 @@ const returnProjects = (projects, category) => {
     <Projects 
     filteredProjects={filteredProjects} />
     )
-  } 
+  } else {
+    return (
+    <p>The house is building, thank you for your patience...</p>
+    )
+  }
 }
 
 const findVideo = (repairs, project) => {
