@@ -5,7 +5,7 @@ import '../styling/Video.css';
 const Video = ({video, projToTry, name, tools}) => {
   let toolsForProj = tools.map((tool, index) => {
     return (
-      <li key={tool+index}>{tool}</li>
+      <li className="tools-list" key={tool+index}>{tool}</li>
     )
   })
   return ( 
@@ -17,11 +17,13 @@ const Video = ({video, projToTry, name, tools}) => {
         </iframe>
       <button onClick={() => projToTry(video)}>Add To My Projects</button>
       </section>
-      <section>
-      <h3>Required Tools:</h3>
-        <ul className="tools-list">
-          {toolsForProj}
-        </ul>
+      <section className='tools-section'>
+        <details>
+          <summary><h3>Click For Required Tools:</h3></summary>
+          <ul>
+            {toolsForProj}
+          </ul>
+        </details>
       </section>
     </div>
   )

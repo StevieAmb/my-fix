@@ -12,13 +12,28 @@
   border: 10px solid #453643;
   box-shadow: 7px 7px 7px #788475;
   width: 50%;
-  margin-left: 5%;
+  margin: 0% 5% 7% 5%;
+}
+
+summary {
+  background: #453643;
+  width: 40rem;
+  color: white;
+  text-align: center;
+}
+
+details {
+  text-align: center;
+}
+
+.tools-list {
+  list-style-type: none;
+  font-size: 36px;
 }
 
 button {
   height: 7%;
   width: 30%;
-  margin-left: 3%;
   margin-top: 3%;
   background-color: #7D8491;
 }
