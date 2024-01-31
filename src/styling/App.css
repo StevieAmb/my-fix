@@ -59,11 +59,11 @@ table {
   width: 400px;
 }
 
-div.loading-message {
+.loading-message {
 	text-align: center;
 }
 
-div.loading-message h2 {
+.loading-message h2 {
   animation: slide-right 10s;
 }
 
