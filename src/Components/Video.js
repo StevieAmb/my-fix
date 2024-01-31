@@ -5,23 +5,25 @@ import '../styling/Video.css';
 const Video = ({video, projToTry, name, tools}) => {
   let toolsForProj = tools.map((tool, index) => {
     return (
-      <li key={tool+index}>{tool}</li>
+      <li className="tools-list" key={tool+index}>{tool}</li>
     )
   })
   return ( 
     <div className="video-page-container">
       <section className="video-container">
         <h3>{name}</h3>
-        <iframe width="420" height="315"
+        <iframe width="520" height="415"
           src={video}>
         </iframe>
-      </section>
       <button onClick={() => projToTry(video)}>Add To My Projects</button>
-      <h3>Required Tools:</h3>
-      <section>
-        <ul className="tools-list">
-          {toolsForProj}
-        </ul>
+      </section>
+      <section className='tools-section'>
+        <details>
+          <summary><h3>Click For Required Tools:</h3></summary>
+          <ul>
+            {toolsForProj}
+          </ul>
+        </details>
       </section>
     </div>
   )

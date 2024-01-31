@@ -1,8 +1,6 @@
 .video-page-container {
   display: flex;
-  flex-direction: column;
   height: 75vh;
-  /* align-content: center; */
 }
 
 .video-container {
@@ -10,19 +8,39 @@
   color: white;
   flex-direction: column;
   align-items: center;
-  background-color: #28112B;
-  border: 10px solid #453643;
-  box-shadow: 7px 7px 7px #788475;
+  background-color: white;
+  border: 10px solid #624c5f;
+  box-shadow: -7px 7px 7px #788475;
   width: 50%;
-  margin-left: 25%;
+  padding-bottom: 2%;
+  margin: 0% 5% 7% 5%;
+}
+
+summary {
+  background: #453643;
+  width: 40rem;
+  color: white;
+  text-align: center;
+}
+
+details {
+  text-align: center;
+}
+
+.tools-list {
+  list-style-type: none;
+  font-size: 36px;
+  margin-bottom: 1.5%;
 }
 
 button {
-  height: 7%;
-  width: 30%;
-  margin-left: 35.5%;
-  margin-top: 1%;
-  background-color: #7D8491;
+  height: 5rem;
+  width: 10rem;
+  margin-top: 3%;
+  background-color: rgb(139, 181, 160);
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 @media only screen and (max-width: 800px) {
