@@ -12,7 +12,7 @@ const Video = ({video, projToTry, name, tools}) => {
     <div className="video-page-container">
       <section className="video-container">
         <h3>{name}</h3>
-        <iframe width="420" height="315"
+        <iframe width="520" height="415"
           src={video}>
         </iframe>
       <button onClick={() => projToTry(video)}>Add To My Projects</button>
