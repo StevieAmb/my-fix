@@ -23,15 +23,14 @@
 }
 
 .my-projects {
-  margin: 2.5rem 4.5rem;
+  margin: 2.7rem 4rem;
   display: flex;
   text-align: center;
   text-decoration: none;
-  border: 1.5px solid black;
   width: 8rem;
   height: 4rem;
   color: white;
-  background-color:  #453643;
+  background-color:  #7E7579;
 }
 
 @media only screen and (max-width: 650px) {
