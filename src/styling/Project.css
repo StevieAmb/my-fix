@@ -1,13 +1,13 @@
 .project-card {
-  background-color: #7E7579;
   text-decoration: none;
+  background: #F3F8F6;
   width: 30%;
   text-align: center;
-  color: white;
+  color: #7E7579;
+  border: 5px solid #7E7579;
 }
 
 .project-card:hover {
-  background-color: #788475;
   box-shadow: 5px 5px 5px #453643;
 }
 
