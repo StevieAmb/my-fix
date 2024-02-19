@@ -1,9 +1,14 @@
 .area-card {
   background-color: #5b6c5d;
   height: 100%;
-  width: 35%;
+  width: 24.3%;
   text-align: center;
   color: white;
+  border-radius: 4rem;
+}
+
+.area-photo {
+  border-radius: 4rem;
 }
 
 .area-card:hover {
