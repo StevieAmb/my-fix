@@ -96,8 +96,6 @@ const findVideo = (repairs, project) => {
   return (
     <div className="App">
       <NavBar />
-      <div className='hero-image'>
-      </div>
       <Switch>
         <Route exact path="/" render={() => <AreasContainer areas={areas} /> } />
         <Route exact path="/:area/home-improvement-repairs" render={( { match } ) =>  returnProjects(homeRepairs, match.params.area)} />

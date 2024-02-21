@@ -53,6 +53,10 @@ table {
 	text-align: center;
 }
 
+.content {
+  text-align: center;
+}
+
 .hero-image {
   background-image: ur('../images/kerstin_kitchen_01.jpeg');
   height: 400px;
