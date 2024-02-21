@@ -69,10 +69,8 @@ table {
   overflow: hidden;
 }
 
-
-
-.loading-message h2 {
-  width: 10%;
+.loading-message {
+  width: 30%;
   animation: slide-right 10s;
 }
 
