@@ -96,7 +96,6 @@ const findVideo = (repairs, project) => {
   return (
     <div className="App">
       <NavBar />
-      <h1>Pick an area of your home where you have a project to do, or where something needs fixing.</h1>
       <Switch>
         <Route exact path="/" render={() => <AreasContainer areas={areas} /> } />
         <Route exact path="/:area/home-improvement-repairs" render={( { match } ) =>  returnProjects(homeRepairs, match.params.area)} />
