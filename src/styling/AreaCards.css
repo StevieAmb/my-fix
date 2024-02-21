@@ -1,5 +1,4 @@
 
-
 .area-card {
   background-color: #5b6c5d;
   height: 100%;
@@ -12,6 +11,7 @@
 .area-photo {
   width: 21rem;
   border-radius: 4rem;
+  width: 100%;
 }
 
 .area-card:hover {
