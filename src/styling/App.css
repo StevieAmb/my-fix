@@ -63,10 +63,10 @@ table {
 	text-align: center;
   width: 100%;
   overflow: hidden;
-
 }
 
 .loading-message h2 {
+  width: 10%;
   animation: slide-right 10s;
 }
 
