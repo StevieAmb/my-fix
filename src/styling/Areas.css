@@ -6,3 +6,11 @@
   justify-items: center;
   flex-wrap: wrap;
 }
+
+.content {
+  text-align: center;
+}
+
+.content h1 {
+  margin-bottom: 4.7%;
+}

@@ -12,12 +12,12 @@ const AreasContainer = ({areas}) => {
     )
   })
   return (
-    <>
-      <h1 className="content">Pick an area of your home where you have a DIY project, or where something needs fixing.</h1>
+    <section className="content">
+      <h1>Pick an area of your home where you have a DIY project, or where something needs fixing.</h1>
       <div className="area-cards-container">
       {allAreas}
     </div>
-    </>
+    </section>
   )
 }
 
