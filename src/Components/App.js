@@ -3,7 +3,6 @@ import AreasContainer from './AreasContainer';
 import  getHomeRepairs  from '../apiCalls';
 import NavBar from './NavBar';
 import Videos from './Videos';
-import Projects from './ProjectsContainer';
 import SavedProjects from './SavedProjects';
 import { Route, Switch } from 'react-router-dom';
 import CatchError from './CatchError';

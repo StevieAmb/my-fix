@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import AreaCards from './AreaCards';
+import Projects from './ProjectsContainer';
 import '../styling/Areas.css';
 
 const AreasContainer = ({homeRepairs, areas}) => {
@@ -9,18 +10,13 @@ const AreasContainer = ({homeRepairs, areas}) => {
   let [area, setArea] = useState('')
 
   const returnProjects = (projects, category) => {
-    let lowerCaseCategory;
-    let lowerCaseArea;
     if (projects.length > 0) {
       var filteredProjects = projects.filter(project => {
-        lowerCaseCategory = category.toLowerCase()
-        lowerCaseArea = project.areaOfHome.toLowerCase()
-      if (lowerCaseCategory === lowerCaseArea) {
+      if (category === project.areaOfHome) {
         return project
-      }
-      })
+      }})
       return (
-      <Projects 
+      <Projects
       filteredProjects={filteredProjects} />
       )
     } else {
@@ -33,14 +29,17 @@ const AreasContainer = ({homeRepairs, areas}) => {
     }
   }
 
+  const showProjects = (area) => {
+    setIsClicked(true)
+    setArea(area)
+  }
+
   let allAreas = areas.map(area => {
     return (
       <AreaCards 
         key={area}
         homeArea={area}
-        onClick={() => {
-          setIsClicked(true)
-        }}
+        showProjects={showProjects}
         />
     )
   })
