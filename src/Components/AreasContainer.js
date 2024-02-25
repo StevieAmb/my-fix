@@ -30,8 +30,7 @@ const AreasContainer = ({homeRepairs, areas}) => {
   }
 
   const showProjects = (area) => {
-    setIsClicked(true)
-    setArea(area)
+    setIsClicked()
   }
 
   let allAreas = areas.map(area => {
@@ -39,7 +38,8 @@ const AreasContainer = ({homeRepairs, areas}) => {
       <AreaCards 
         key={area}
         homeArea={area}
-        showProjects={showProjects}
+        setIsClicked={setIsClicked}
+        setArea={setArea}
         />
     )
   })
