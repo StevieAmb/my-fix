@@ -23,6 +23,8 @@ const AreaCards = ({homeArea, onClick}) => {
   )
 }
 
+//So, the function needs to take in the area, as well as set the isClicked to true
+
 
 export default AreaCards;
 

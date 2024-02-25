@@ -62,7 +62,7 @@ const findVideo = (repairs, project) => {
     <div className="App">
       <NavBar />
       <Switch>
-        <Route exact path="/" render={() => <AreasContainer areas={areas} /> } />
+        <Route exact path="/" render={() => <AreasContainer areas={areas} homeRepairs={homeRepairs}/> } />
         <Route exact path="/video/:project" render={( { match }) => findVideo(homeRepairs, match.params.project)} />
         <Route exact path="/tryThis" render={() => listProjectsToTry(homeRepairs, saved)} />
       </Switch>

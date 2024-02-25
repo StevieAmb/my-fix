@@ -3,16 +3,10 @@ import PropTypes from 'prop-types';
 import AreaCards from './AreaCards';
 import '../styling/Areas.css';
 
-const AreasContainer = ({areas}) => {
+const AreasContainer = ({homeRepairs, areas}) => {
 
-  let [homeRepairs, setHomeRepairs] = useState([])
   let [isClicked, setIsClicked] = useState(false)
-
-  useEffect(() => {
-    getHomeRepairs()
-    .then(data => setHomeRepairs(data))
-    .catch(error => setError(error))
-  },[])
+  let [area, setArea] = useState('')
 
   const returnProjects = (projects, category) => {
     let lowerCaseCategory;
@@ -44,7 +38,9 @@ const AreasContainer = ({areas}) => {
       <AreaCards 
         key={area}
         homeArea={area}
-        onClick={() => setIsClicked(true)}
+        onClick={() => {
+          setIsClicked(true)
+        }}
         />
     )
   })
@@ -53,7 +49,7 @@ const AreasContainer = ({areas}) => {
       <h1>Pick an area of your home where you have a DIY project, or where something needs fixing.</h1>
       <div className="area-cards-container">
       {allAreas}
-      {isClicked && returnProjects()}
+      {isClicked && returnProjects(homeRepairs, area)}
     </div>
     </section>
   )
