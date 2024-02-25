@@ -53,16 +53,6 @@ table {
 	text-align: center;
 }
 
-.content {
-  text-align: center;
-}
-
-.hero-image {
-  background-image: ur('../images/kerstin_kitchen_01.jpeg');
-  height: 400px;
-  width: 400px;
-}
-
 /* .loading-message {
 	text-align: center;
   overflow: hidden;
@@ -74,10 +64,11 @@ table {
   animation: slide-right 10s forwards;
 } */
 
-.loading-message {
+.loading-message h2 {
   width: 100px;
   height: 100px;
   background: plum;
+  color: blue;
   transform: translateX(100%);
   position: fixed;
   -webkit-animation: anim 3.5s 1;

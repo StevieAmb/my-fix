@@ -15,16 +15,6 @@ const App = () =>  {
     let [homeRepairs, setHomeRepairs] = useState([])
     let [loading, setLoading] = useState()
 
-
-
-    useEffect(() => {
-      getHomeRepairs()
-      .then(data => setHomeRepairs(data))
-      .catch(error => setError(error))
-    },[])
-
-    console.log(homeRepairs)
-
   const addToSaved = (projectVid) => {
     if (!saved.includes(projectVid)) {
       setToSaved([...saved, projectVid] )
@@ -52,31 +42,6 @@ const App = () =>  {
       }
     }
   }
-
-const returnProjects = (projects, category) => {
-  let lowerCaseCategory;
-  let lowerCaseArea;
-  if (projects.length > 0) {
-    var filteredProjects = projects.filter(project => {
-      lowerCaseCategory = category.toLowerCase()
-      lowerCaseArea = project.areaOfHome.toLowerCase()
-    if (lowerCaseCategory === lowerCaseArea) {
-      return project
-    }
-    })
-    return (
-    <Projects 
-    filteredProjects={filteredProjects} />
-    )
-  } else {
-    return (
-      <div className='loading-message'>
-        <h2>Building, building, building...</h2>
-        <h2>Thank you for your patience.</h2>
-      </div>
-    )
-  }
-}
 
 const findVideo = (repairs, project) => {
   if (repairs.length > 0) {

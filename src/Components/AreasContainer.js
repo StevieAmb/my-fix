@@ -4,6 +4,32 @@ import AreaCards from './AreaCards';
 import '../styling/Areas.css';
 
 const AreasContainer = ({areas}) => {
+
+  const returnProjects = (projects, category) => {
+    let lowerCaseCategory;
+    let lowerCaseArea;
+    if (projects.length > 0) {
+      var filteredProjects = projects.filter(project => {
+        lowerCaseCategory = category.toLowerCase()
+        lowerCaseArea = project.areaOfHome.toLowerCase()
+      if (lowerCaseCategory === lowerCaseArea) {
+        return project
+      }
+      })
+      return (
+      <Projects 
+      filteredProjects={filteredProjects} />
+      )
+    } else {
+      return (
+        <div className='loading-message'>
+          <h2>Building, building, building...</h2>
+          <h2>Thank you for your patience.</h2>
+        </div>
+      )
+    }
+  }
+  
   let allAreas = areas.map(area => {
     return (
       <AreaCards 
