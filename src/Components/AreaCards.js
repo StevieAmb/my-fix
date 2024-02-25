@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import '../styling/AreaCards.css';
 import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
 import bedroom from '../images/bedroom.jpeg';
 import bathroom from '../images/bathroom.jpeg';
 import kitchen from '../images/kerstin_kitchen_01.jpeg';

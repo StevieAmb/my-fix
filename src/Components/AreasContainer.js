@@ -11,10 +11,7 @@ const AreasContainer = ({homeRepairs, areas}) => {
 
   const returnProjects = (projects, category) => {
     if (projects.length > 0) {
-      var filteredProjects = projects.filter(project => {
-      if (category === project.areaOfHome) {
-        return project
-      }})
+      var filteredProjects = projects.filter(project => category === project.areaOfHome)
       return (
       <Projects
       filteredProjects={filteredProjects} />
