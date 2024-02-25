@@ -7,7 +7,7 @@ import bathroom from '../images/bathroom.jpeg';
 import kitchen from '../images/kerstin_kitchen_01.jpeg';
 import miscellaneous from '../images/miscellaneous.jpeg';
 
-const AreaCards = ({homeArea}) => {
+const AreaCards = ({homeArea, onClick}) => {
   let images = [bedroom, bathroom, kitchen, miscellaneous]
   let areaPics = images.map(image => {
     if(image.includes(homeArea)) {
@@ -16,12 +16,10 @@ const AreaCards = ({homeArea}) => {
   })
 
   return (
-    <NavLink className="area-card" to={`/${homeArea}/home-improvement-repairs`} >
-      <div className='area-card-square'>
+      <div onClick={onClick} className='area-card-square'>
         <h1 className='home-area'>{homeArea.toUpperCase()}</h1>
         {areaPics}
       </div>
-    </NavLink>
   )
 }
 
