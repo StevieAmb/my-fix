@@ -9,9 +9,12 @@ const AreasContainer = ({homeRepairs, areas}) => {
   let [isClicked, setIsClicked] = useState(false)
   let [area, setArea] = useState('')
 
-  const returnProjects = (projects, category) => {
+  const returnProjects = (projects, area) => {
     if (projects.length > 0) {
-      var filteredProjects = projects.filter(project => category === project.areaOfHome)
+      var filteredProjects = projects.filter(project =>  {
+       if(area === project.areaOfHome.toLowerCase()) {
+        return project
+       }})
       return (
       <Projects
       filteredProjects={filteredProjects} />

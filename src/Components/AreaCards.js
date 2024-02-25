@@ -10,7 +10,7 @@ const AreaCards = ({homeArea, setIsClicked, setArea}) => {
   let images = [bedroom, bathroom, kitchen, miscellaneous]
   let areaPics = images.map(image => {
     if(image.includes(homeArea)) {
-      return (<img key={image} onClick={(homeArea) => showProjects(homeArea)} className="area-photo" src={`${image}`} alt={homeArea} height='278'/>)
+      return (<img key={image} className="area-photo" src={`${image}`} alt={homeArea} height='278'/>)
     } 
   })
 
@@ -20,7 +20,7 @@ const AreaCards = ({homeArea, setIsClicked, setArea}) => {
   }
 
   return (
-    <section className='area-card'>
+    <section onClick={() => showProjects(homeArea)} className='area-card'>
       <div className='area-card-square'>
         <h1 className='home-area'>{homeArea.toUpperCase()}</h1>
         {areaPics}
