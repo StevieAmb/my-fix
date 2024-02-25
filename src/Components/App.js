@@ -3,6 +3,7 @@ import AreasContainer from './AreasContainer';
 import  getHomeRepairs  from '../apiCalls';
 import NavBar from './NavBar';
 import Videos from './Videos';
+import Projects from './ProjectsContainer';
 import SavedProjects from './SavedProjects';
 import { Route, Switch } from 'react-router-dom';
 import CatchError from './CatchError';
@@ -13,6 +14,12 @@ const App = () =>  {
     let [saved, setToSaved] = useState([])
     let [homeRepairs, setHomeRepairs] = useState([])
     let [loading, setLoading] = useState()
+
+    useEffect(() => {
+      getHomeRepairs()
+      .then(data => setHomeRepairs(data))
+      .catch(error => setError(error))
+    },[])
 
   const addToSaved = (projectVid) => {
     if (!saved.includes(projectVid)) {
@@ -42,6 +49,7 @@ const App = () =>  {
     }
   }
 
+
 const findVideo = (repairs, project) => {
   if (repairs.length > 0) {
   let foundVideo = repairs.find(repair => repair.project === project)
@@ -61,7 +69,7 @@ const findVideo = (repairs, project) => {
     <div className="App">
       <NavBar />
       <Switch>
-        <Route exact path="/" render={() => <AreasContainer areas={areas} homeRepairs={homeRepairs}/> } />
+        <Route exact path="/" render={() => <AreasContainer areas={areas} homeRepairs={homeRepairs} /> } />
         <Route exact path="/video/:project" render={( { match }) => findVideo(homeRepairs, match.params.project)} />
         <Route exact path="/tryThis" render={() => listProjectsToTry(homeRepairs, saved)} />
       </Switch>

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import AreaCards from './AreaCards';
 import Projects from './ProjectsContainer';
-import '../styling/Areas.css';
+import '../styling/AreasContainer.css';
 
 const AreasContainer = ({homeRepairs, areas}) => {
 
@@ -29,10 +29,6 @@ const AreasContainer = ({homeRepairs, areas}) => {
     }
   }
 
-  const showProjects = (area) => {
-    setIsClicked()
-  }
-
   let allAreas = areas.map(area => {
     return (
       <AreaCards 
@@ -47,9 +43,9 @@ const AreasContainer = ({homeRepairs, areas}) => {
     <section className="content">
       <h1>Pick an area of your home where you have a DIY project, or where something needs fixing.</h1>
       <div className="area-cards-container">
-      {allAreas}
+        {allAreas}
+      </div>
       {isClicked && returnProjects(homeRepairs, area)}
-    </div>
     </section>
   )
 }

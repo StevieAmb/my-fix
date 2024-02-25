@@ -9,6 +9,7 @@
 
 .content {
   text-align: center;
+  display: block;
 }
 
 .content h1 {
