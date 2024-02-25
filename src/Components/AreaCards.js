@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../styling/AreaCards.css';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
@@ -7,7 +7,7 @@ import bathroom from '../images/bathroom.jpeg';
 import kitchen from '../images/kerstin_kitchen_01.jpeg';
 import miscellaneous from '../images/miscellaneous.jpeg';
 
-const AreaCards = ({homeArea}) => {
+const AreaCards = ({homeArea, setIsClicked, setArea}) => {
   let images = [bedroom, bathroom, kitchen, miscellaneous]
   let areaPics = images.map(image => {
     if(image.includes(homeArea)) {
@@ -15,15 +15,20 @@ const AreaCards = ({homeArea}) => {
     } 
   })
 
+  const showProjects = (area) => {
+    setIsClicked(true)
+    setArea(area)
+  }
+
   return (
-    <NavLink className="area-card" to={`/${homeArea}/home-improvement-repairs`} >
-      <div className='area-card-square'>
+      <div onClick={(homeArea) => showProjects(homeArea)} className='area-card-square'>
         <h1 className='home-area'>{homeArea.toUpperCase()}</h1>
         {areaPics}
       </div>
-    </NavLink>
   )
 }
+
+//So, the function needs to take in the area, as well as set the isClicked to true
 
 
 export default AreaCards;

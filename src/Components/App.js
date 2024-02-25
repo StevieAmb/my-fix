@@ -3,7 +3,6 @@ import AreasContainer from './AreasContainer';
 import  getHomeRepairs  from '../apiCalls';
 import NavBar from './NavBar';
 import Videos from './Videos';
-import Projects from './ProjectsContainer';
 import SavedProjects from './SavedProjects';
 import { Route, Switch } from 'react-router-dom';
 import CatchError from './CatchError';
@@ -14,16 +13,6 @@ const App = () =>  {
     let [saved, setToSaved] = useState([])
     let [homeRepairs, setHomeRepairs] = useState([])
     let [loading, setLoading] = useState()
-
-
-
-    useEffect(() => {
-      getHomeRepairs()
-      .then(data => setHomeRepairs(data))
-      .catch(error => setError(error))
-    },[])
-
-    console.log(homeRepairs)
 
   const addToSaved = (projectVid) => {
     if (!saved.includes(projectVid)) {
@@ -53,31 +42,6 @@ const App = () =>  {
     }
   }
 
-const returnProjects = (projects, category) => {
-  let lowerCaseCategory;
-  let lowerCaseArea;
-  if (projects.length > 0) {
-    var filteredProjects = projects.filter(project => {
-      lowerCaseCategory = category.toLowerCase()
-      lowerCaseArea = project.areaOfHome.toLowerCase()
-    if (lowerCaseCategory === lowerCaseArea) {
-      return project
-    }
-    })
-    return (
-    <Projects 
-    filteredProjects={filteredProjects} />
-    )
-  } else {
-    return (
-      <div className='loading-message'>
-        <h2>Building, building, building...</h2>
-        <h2>Thank you for your patience.</h2>
-      </div>
-    )
-  }
-}
-
 const findVideo = (repairs, project) => {
   if (repairs.length > 0) {
   let foundVideo = repairs.find(repair => repair.project === project)
@@ -97,8 +61,7 @@ const findVideo = (repairs, project) => {
     <div className="App">
       <NavBar />
       <Switch>
-        <Route exact path="/" render={() => <AreasContainer areas={areas} /> } />
-        <Route exact path="/:area/home-improvement-repairs" render={( { match } ) =>  returnProjects(homeRepairs, match.params.area)} />
+        <Route exact path="/" render={() => <AreasContainer areas={areas} homeRepairs={homeRepairs}/> } />
         <Route exact path="/video/:project" render={( { match }) => findVideo(homeRepairs, match.params.project)} />
         <Route exact path="/tryThis" render={() => listProjectsToTry(homeRepairs, saved)} />
       </Switch>
