@@ -20,10 +20,13 @@ const AreaCards = ({homeArea, setIsClicked, setArea}) => {
   }
 
   return (
+    <section className='area-card'>
+
       <div className='area-card-square'>
         <h1 className='home-area'>{homeArea.toUpperCase()}</h1>
         {areaPics}
       </div>
+    </section>
   )
 }
 
