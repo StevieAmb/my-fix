@@ -18,7 +18,7 @@ const Video = ({video, projToTry, name, tools}) => {
         <iframe width="520" height="415"
           src={video}>
         </iframe>
-      <button onClick={() => projToTry(video)}>Add To My Projects</button>
+      {tools && <button onClick={() => projToTry(video)}>Add To My Projects</button>}
       </section>
       {tools && <section className='tools-section'>
         <details>
