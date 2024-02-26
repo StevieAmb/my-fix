@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styling/AreaCards.css';
 import PropTypes from 'prop-types';
 import bedroom from '../images/bedroom.jpeg';
@@ -6,7 +6,8 @@ import bathroom from '../images/bathroom.jpeg';
 import kitchen from '../images/kerstin_kitchen_01.jpeg';
 import miscellaneous from '../images/miscellaneous.jpeg';
 
-const AreaCards = ({homeArea, setIsClicked, setArea}) => {
+const AreaCards = ({homeArea, setArea, className}) => {
+
   let images = [bedroom, bathroom, kitchen, miscellaneous]
   let areaPics = images.map(image => {
     if(image.includes(homeArea)) {
@@ -15,12 +16,11 @@ const AreaCards = ({homeArea, setIsClicked, setArea}) => {
   })
 
   const showProjects = (area) => {
-    setIsClicked(true)
     setArea(area)
   }
 
   return (
-    <section onClick={() => showProjects(homeArea)} className='area-card'>
+    <section onClick={() => showProjects(homeArea)} className={`area-card`}>
       <div className='area-card-square'>
         <h1 className='home-area'>{homeArea.toUpperCase()}</h1>
         {areaPics}
@@ -29,7 +29,7 @@ const AreaCards = ({homeArea, setIsClicked, setArea}) => {
   )
 }
 
-//So, the function needs to take in the area, as well as set the isClicked to true
+//Let's use, instead of a boolean, let's use the actual home area. 
 
 
 export default AreaCards;

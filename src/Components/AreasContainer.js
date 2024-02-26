@@ -5,8 +5,6 @@ import Projects from './ProjectsContainer';
 import '../styling/AreasContainer.css';
 
 const AreasContainer = ({homeRepairs, areas}) => {
-
-  let [isClicked, setIsClicked] = useState(false)
   let [area, setArea] = useState('')
 
   const returnProjects = (projects, area) => {
@@ -34,8 +32,8 @@ const AreasContainer = ({homeRepairs, areas}) => {
       <AreaCards 
         key={area}
         homeArea={area}
-        setIsClicked={setIsClicked}
         setArea={setArea}
+        className='shrink'
         />
     )
   })
@@ -45,7 +43,7 @@ const AreasContainer = ({homeRepairs, areas}) => {
       <div className="area-cards-container">
         {allAreas}
       </div>
-      {isClicked && returnProjects(homeRepairs, area)}
+      {area && returnProjects(homeRepairs, area)}
     </section>
   )
 }
