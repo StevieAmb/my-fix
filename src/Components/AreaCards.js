@@ -16,7 +16,6 @@ const AreaCards = ({homeArea, setArea}) => {
   })
 
   const showProjects = (area) => {
-    console.log(area)
     setArea(area)
   }
 

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import AreasContainer from './AreasContainer';
-import  getHomeRepairs  from '../apiCalls';
+import getHomeRepairs  from '../apiCalls';
 import NavBar from './NavBar';
-import Videos from './Videos';
 import SavedProjects from './SavedProjects';
 import { Route, Switch } from 'react-router-dom';
 import CatchError from './CatchError';
+import VideosContainer from './VideosContainer';
 
 const App = () =>  {
     let areas =  ['kitchen', 'bathroom', 'bedroom', 'misc']
@@ -48,12 +48,11 @@ const App = () =>  {
     }
   }
 
-
 const findVideo = (repairs, project) => {
   if (repairs.length > 0) {
   let foundVideo = repairs.find(repair => repair.project === project)
     return (
-      <Videos toTry={addToSaved} repairVideo={foundVideo} />
+      <VideosContainer toTry={addToSaved} repairVideo={foundVideo} />
     )
   }
 }

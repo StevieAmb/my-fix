@@ -3,11 +3,14 @@ import PropTypes from 'prop-types';
 import '../styling/Video.css';
 
 const Video = ({video, projToTry, name, tools}) => {
-  let toolsForProj = tools.map((tool, index) => {
-    return (
-      <li className="tools-list" key={tool+index}>{tool}</li>
-    )
-  })
+  let toolsForProj;
+  if(tools) {
+    toolsForProj = tools.map((tool, index) => {
+      return (
+        <li className="tools-list" key={tool+index}>{tool}</li>
+      )
+    }) 
+  }
   return ( 
     <div className="video-page-container">
       <section className="video-container">
@@ -15,16 +18,16 @@ const Video = ({video, projToTry, name, tools}) => {
         <iframe width="520" height="415"
           src={video}>
         </iframe>
-      <button onClick={() => projToTry(video)}>Add To My Projects</button>
+      {tools && <button onClick={() => projToTry(video)}>Add To My Projects</button>}
       </section>
-      <section className='tools-section'>
+      {tools && <section className='tools-section'>
         <details>
           <summary><h3>Click For Required Tools:</h3></summary>
           <ul>
             {toolsForProj}
           </ul>
         </details>
-      </section>
+      </section>}
     </div>
   )
 }

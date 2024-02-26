@@ -15,6 +15,10 @@
   margin: 0% 5% 7% 5%;
 }
 
+.video-container h3 {
+  color: black;
+}
+
 summary {
   background: #453643;
   width: 40rem;
