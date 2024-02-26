@@ -6,8 +6,8 @@ import bathroom from '../images/bathroom.jpeg';
 import kitchen from '../images/kerstin_kitchen_01.jpeg';
 import miscellaneous from '../images/miscellaneous.jpeg';
 
-const AreaCards = ({homeArea, setArea, className}) => {
-
+const AreaCards = ({homeArea, setArea}) => {
+  let [className, setClassName] = useState('')
   let images = [bedroom, bathroom, kitchen, miscellaneous]
   let areaPics = images.map(image => {
     if(image.includes(homeArea)) {
@@ -16,11 +16,12 @@ const AreaCards = ({homeArea, setArea, className}) => {
   })
 
   const showProjects = (area) => {
+    console.log(area)
     setArea(area)
   }
 
   return (
-    <section onClick={() => showProjects(homeArea)} className={`area-card`}>
+    <section onClick={() => showProjects(homeArea)} className={`area-card ${className}`}>
       <div className='area-card-square'>
         <h1 className='home-area'>{homeArea.toUpperCase()}</h1>
         {areaPics}

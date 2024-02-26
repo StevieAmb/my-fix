@@ -33,7 +33,6 @@ const AreasContainer = ({homeRepairs, areas}) => {
         key={area}
         homeArea={area}
         setArea={setArea}
-        className='shrink'
         />
     )
   })
@@ -43,6 +42,7 @@ const AreasContainer = ({homeRepairs, areas}) => {
       <div className="area-cards-container">
         {allAreas}
       </div>
+      <hr></hr>
       {area && returnProjects(homeRepairs, area)}
     </section>
   )
