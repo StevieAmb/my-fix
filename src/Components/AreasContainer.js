@@ -43,6 +43,7 @@ const AreasContainer = ({homeRepairs, areas}) => {
         {allAreas}
       </div>
       <hr></hr>
+      <h1>Pick something in your home that needs fixin'.</h1>
       {area && returnProjects(homeRepairs, area)}
     </section>
   )
