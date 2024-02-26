@@ -7,6 +7,11 @@
   border-radius: 4rem;
 }
 
+.shrink {
+  height: 5%;
+  width: 12.15%;
+}
+
 .area-photo {
   width: 21rem;
   border-radius: 4rem;
