@@ -1,16 +1,17 @@
 import React from 'react';
-import Project from './Project';
 import PropTypes from 'prop-types';
+import Video from './Video';
 
 const SavedProjects = ({category}) => {
+  console.log('a project', category)
   let savedProjects = category.map(category => {
+    console.log('in the map', category)
     return (
-      <Project
+      <Video 
         key={category.id}
-        id={category.id}
+        video={category.videos}
         name={category.project}
-        tools={category.toolsNeeded}
-        />
+      />
     )
   })
   return (
