@@ -21,9 +21,9 @@
   flex-direction: column;
   align-items: center;
   background-color: white;
-  border: 10px solid rgb(139, 181, 160);
+  border: 6px solid rgb(139, 181, 160);
   width: 35%;
-  padding: 0 9rem;
+  padding: 1.5rem 9rem 2.5rem 9rem;
   margin: 0% 5% 7% 5%;
 }
 
