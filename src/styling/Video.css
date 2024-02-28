@@ -1,6 +1,7 @@
 .video-page-container {
   display: flex;
-  height: 75vh;
+  width: 100%;
+  justify-content: center;
 }
 
 .video-container {
@@ -11,7 +12,7 @@
   border: 10px solid #7F7B7D;
   width: 50%;
   padding-bottom: 2%;
-  margin: 0% 5% 7% 5%;
+  /* margin: 0% 5% 7% 5%; */
 }
 
 
@@ -20,9 +21,9 @@
   flex-direction: column;
   align-items: center;
   background-color: white;
-  border: 10px solid #7F7B7D;
-  width: 40%;
-  padding-bottom: 2%;
+  border: 10px solid rgb(139, 181, 160);
+  width: 35%;
+  padding: 0 9rem;
   margin: 0% 5% 7% 5%;
 }
 

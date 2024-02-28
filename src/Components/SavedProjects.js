@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Video from './Video';
+import '../styling/SavedProjects.css'
 
 const SavedProjects = ({category}) => {
   console.log('a project', category)

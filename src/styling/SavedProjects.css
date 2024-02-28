@@ -1,8 +1,4 @@
 .saved-container {
-  justify-content: center;
-  margin: 10px;
+  margin: 2rem;
   display: flex;
-  gap: 1.7em;
-  justify-items: center;
-  flex-wrap: wrap;
 }
