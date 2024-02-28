@@ -10,6 +10,7 @@ const VideosContainer = ({repairVideo, toTry}) => {
       projToTry={toTry}
       name={repairVideo.project}
       tools={repairVideo.toolsNeeded}
+      className='video-container'
       />
     )
   }

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../styling/Video.css';
 
-const Video = ({video, projToTry, name, tools}) => {
+const Video = ({video, projToTry, name, tools, className}) => {
   let toolsForProj;
   if(tools) {
     toolsForProj = tools.map((tool, index) => {
@@ -13,7 +13,7 @@ const Video = ({video, projToTry, name, tools}) => {
   }
   return ( 
     <div className="video-page-container">
-      <section className="video-container">
+      <section className={className}>
         <h3>{name}</h3>
         <iframe width="520" height="415"
           src={video}>
