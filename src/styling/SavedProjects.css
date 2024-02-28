@@ -1,0 +1,8 @@
+.try-container {
+  justify-content: center;
+  margin: 10px;
+  display: flex;
+  gap: 1.7em;
+  justify-items: center;
+  flex-wrap: wrap;
+}
