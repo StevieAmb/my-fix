@@ -11,11 +11,12 @@ const SavedProjects = ({category}) => {
         key={category.id}
         video={category.videos}
         name={category.project}
+        className='saved-video-container'
       />
     )
   })
   return (
-    <section className="try-container">
+    <section className="saved-container">
           {savedProjects}
     </section>
   )

@@ -5,12 +5,23 @@
 
 .video-container {
   display: flex;
-  color: white;
   flex-direction: column;
   align-items: center;
   background-color: white;
   border: 10px solid #7F7B7D;
   width: 50%;
+  padding-bottom: 2%;
+  margin: 0% 5% 7% 5%;
+}
+
+
+.saved-video-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border: 10px solid #7F7B7D;
+  width: 40%;
   padding-bottom: 2%;
   margin: 0% 5% 7% 5%;
 }
